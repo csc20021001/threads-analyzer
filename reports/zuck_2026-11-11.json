@@ -1,0 +1,1283 @@
+{
+  "meta": {
+    "username": "zuck",
+    "fetchedAt": "2026-11-11T12:10:22.089Z",
+    "source": "playwright",
+    "via": "scrape_cache"
+  },
+  "result": {
+    "summary": {
+      "postCount": 30,
+      "viewsCoverage": 1,
+      "rankedBy": "rate",
+      "rateMinViews": 180790
+    },
+    "cleaning": {
+      "inputCount": 30,
+      "duplicatesRemoved": 0,
+      "missing": {
+        "postedAt": 0,
+        "views": 0,
+        "text": 0,
+        "url": 0
+      }
+    },
+    "overview": {
+      "postCount": 30,
+      "dateFrom": "2026-04-08 23:59",
+      "dateTo": "2026-11-10 07:31",
+      "avgLikes": 2893.5,
+      "avgReplies": 852.7,
+      "avgReposts": 166.4,
+      "avgQuotes": 57.4,
+      "avgShares": 152,
+      "avgViews": 415997,
+      "avgInteractions": 4122.1,
+      "medianInteractions": 3229,
+      "overallRate": 0.0099,
+      "viewsCoverage": 1
+    },
+    "top5": [
+      {
+        "url": "https://www.threads.com/@zuck/post/DW4Gb79kQc0",
+        "text": "Today we're sharing our new model family, Muse, and releasing our first model, Spark. You can try them in Meta AI.",
+        "likes": 2969,
+        "links": [],
+        "views": 214939,
+        "postId": "3870872187813562164",
+        "quotes": 60,
+        "shares": 364,
+        "replies": 687,
+        "reposts": 205,
+        "mentions": [],
+        "postedAt": "2026-04-08T15:59:05.000Z",
+        "postedAtLocal": "2026-04-08 23:59",
+        "weekday": 3,
+        "hour": 23,
+        "charCount": 94,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 4285,
+        "rate": 0.01993588878705121
+      },
+      {
+        "url": "https://www.threads.com/@zuck/post/Ddt7cL5EfUG",
+        "text": "Agrippa said it's time to get back to work 😎",
+        "likes": 5225,
+        "links": [],
+        "views": 355031,
+        "postId": "3994109866205639942",
+        "quotes": 45,
+        "shares": 151,
+        "replies": 599,
+        "reposts": 266,
+        "mentions": [],
+        "postedAt": "2026-09-25T16:50:21.000Z",
+        "postedAtLocal": "2026-09-26 00:50",
+        "weekday": 6,
+        "hour": 0,
+        "charCount": 35,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 6286,
+        "rate": 0.01770549613977371
+      },
+      {
+        "url": "https://www.threads.com/@zuck/post/DfNR0zhEdWv",
+        "text": "Tried to get the family to dress as burger night, but couldn't corral the littlest burger",
+        "likes": 4426,
+        "links": [],
+        "views": 363444,
+        "postId": "4020948437830849967",
+        "quotes": 38,
+        "shares": 107,
+        "replies": 809,
+        "reposts": 189,
+        "mentions": [],
+        "postedAt": "2026-11-01T17:33:48.000Z",
+        "postedAtLocal": "2026-11-02 01:33",
+        "weekday": 1,
+        "hour": 1,
+        "charCount": 74,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 5569,
+        "rate": 0.015322855790713288
+      },
+      {
+        "url": "https://www.threads.com/@zuck/post/DZ7eGA1G7wU",
+        "text": "Our new line of @metaglasses is available today. Three shapes, 26 style combos, with our most advanced Meta AI built in. Plus, three custom styles designed by @kyliejenner.",
+        "likes": 3835,
+        "links": [],
+        "views": 420295,
+        "postId": "3925863854786722836",
+        "quotes": 119,
+        "shares": 247,
+        "replies": 1376,
+        "reposts": 245,
+        "mentions": [
+          "metaglasses",
+          "kyliejenner"
+        ],
+        "postedAt": "2026-06-23T12:57:42.000Z",
+        "postedAtLocal": "2026-06-23 20:57",
+        "weekday": 2,
+        "hour": 20,
+        "charCount": 145,
+        "hashtags": [],
+        "mentionList": [
+          "metaglasses",
+          "kyliejenner.",
+          "kyliejenner"
+        ],
+        "urlCount": 0,
+        "postType": "含 mention",
+        "interactions": 5822,
+        "rate": 0.013852175257854602
+      },
+      {
+        "url": "https://www.threads.com/@zuck/post/Dbq20Xaj8RL",
+        "text": "Announcing Muse Code beta, our multi-agent coding harness, and Muse Spark 1.2, our newest coding model on the pareto frontier of intelligence and cost. \n\nMuse Code distributes complex tasks to sub-agents rather than having one agent do everything. You get speed and quality. \n\nIt's easy and low-cost to get started. Install Muse Code with one line and you can start on our contributor tier.",
+        "likes": 2660,
+        "links": [],
+        "views": 253156,
+        "postId": "3957216315664483403",
+        "quotes": 57,
+        "shares": 265,
+        "replies": 316,
+        "reposts": 167,
+        "mentions": [],
+        "postedAt": "2026-08-05T19:09:27.000Z",
+        "postedAtLocal": "2026-08-06 03:09",
+        "weekday": 4,
+        "hour": 3,
+        "charCount": 323,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 3465,
+        "rate": 0.01368721262778682
+      }
+    ],
+    "timeDist": {
+      "byWeekday": [
+        {
+          "key": 1,
+          "label": "週一",
+          "count": 5,
+          "avgInteractions": 4041.8
+        },
+        {
+          "key": 2,
+          "label": "週二",
+          "count": 6,
+          "avgInteractions": 7349.7
+        },
+        {
+          "key": 3,
+          "label": "週三",
+          "count": 9,
+          "avgInteractions": 2918.9
+        },
+        {
+          "key": 4,
+          "label": "週四",
+          "count": 6,
+          "avgInteractions": 3141.2
+        },
+        {
+          "key": 5,
+          "label": "週五",
+          "count": 2,
+          "avgInteractions": 2434
+        },
+        {
+          "key": 6,
+          "label": "週六",
+          "count": 2,
+          "avgInteractions": 4685
+        },
+        {
+          "key": 0,
+          "label": "週日",
+          "count": 0,
+          "avgInteractions": 0
+        }
+      ],
+      "byHour": [
+        {
+          "key": 0,
+          "label": "0 點",
+          "count": 2,
+          "avgInteractions": 4830
+        },
+        {
+          "key": 1,
+          "label": "1 點",
+          "count": 4,
+          "avgInteractions": 3418.3
+        },
+        {
+          "key": 2,
+          "label": "2 點",
+          "count": 3,
+          "avgInteractions": 3712.7
+        },
+        {
+          "key": 3,
+          "label": "3 點",
+          "count": 3,
+          "avgInteractions": 2559.7
+        },
+        {
+          "key": 4,
+          "label": "4 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 5,
+          "label": "5 點",
+          "count": 1,
+          "avgInteractions": 7413
+        },
+        {
+          "key": 6,
+          "label": "6 點",
+          "count": 1,
+          "avgInteractions": 2413
+        },
+        {
+          "key": 7,
+          "label": "7 點",
+          "count": 3,
+          "avgInteractions": 1637.3
+        },
+        {
+          "key": 8,
+          "label": "8 點",
+          "count": 1,
+          "avgInteractions": 3735
+        },
+        {
+          "key": 9,
+          "label": "9 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 10,
+          "label": "10 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 11,
+          "label": "11 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 12,
+          "label": "12 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 13,
+          "label": "13 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 14,
+          "label": "14 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 15,
+          "label": "15 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 16,
+          "label": "16 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 17,
+          "label": "17 點",
+          "count": 1,
+          "avgInteractions": 3557
+        },
+        {
+          "key": 18,
+          "label": "18 點",
+          "count": 2,
+          "avgInteractions": 13388
+        },
+        {
+          "key": 19,
+          "label": "19 點",
+          "count": 1,
+          "avgInteractions": 2817
+        },
+        {
+          "key": 20,
+          "label": "20 點",
+          "count": 2,
+          "avgInteractions": 5864
+        },
+        {
+          "key": 21,
+          "label": "21 點",
+          "count": 3,
+          "avgInteractions": 2368
+        },
+        {
+          "key": 22,
+          "label": "22 點",
+          "count": 1,
+          "avgInteractions": 4271
+        },
+        {
+          "key": 23,
+          "label": "23 點",
+          "count": 2,
+          "avgInteractions": 3393
+        }
+      ],
+      "busiestWeekday": {
+        "key": 3,
+        "label": "週三",
+        "count": 9,
+        "avgInteractions": 2918.9
+      },
+      "busiestHour": {
+        "key": 1,
+        "label": "1 點",
+        "count": 4,
+        "avgInteractions": 3418.3
+      },
+      "bestWeekday": {
+        "key": 2,
+        "label": "週二",
+        "count": 6,
+        "avgInteractions": 7349.7
+      },
+      "bestHour": {
+        "key": 18,
+        "label": "18 點",
+        "count": 2,
+        "avgInteractions": 13388
+      }
+    },
+    "lengthRel": {
+      "rhoInteractions": -0.09,
+      "rhoRate": -0.33,
+      "buckets": [
+        {
+          "label": "短文",
+          "range": "100 字以下",
+          "count": 9,
+          "avgInteractions": 6028.9,
+          "avgRate": 0.017
+        },
+        {
+          "label": "中篇",
+          "range": "101–250 字",
+          "count": 14,
+          "avgInteractions": 2816.9,
+          "avgRate": 0.011
+        },
+        {
+          "label": "長文",
+          "range": "250 字以上",
+          "count": 7,
+          "avgInteractions": 4280.7,
+          "avgRate": 0.0097
+        }
+      ],
+      "points": [
+        {
+          "postId": "4026926512892651125",
+          "charCount": 64,
+          "interactions": 1356
+        },
+        {
+          "postId": "4024588638696309702",
+          "charCount": 199,
+          "interactions": 3084
+        },
+        {
+          "postId": "4023876994299759089",
+          "charCount": 70,
+          "interactions": 2455
+        },
+        {
+          "postId": "4020948437830849967",
+          "charCount": 74,
+          "interactions": 5569
+        },
+        {
+          "postId": "4006434140014576097",
+          "charCount": 116,
+          "interactions": 3374
+        },
+        {
+          "postId": "4006376160339141718",
+          "charCount": 28,
+          "interactions": 2501
+        },
+        {
+          "postId": "3996155940894885511",
+          "charCount": 310,
+          "interactions": 5906
+        },
+        {
+          "postId": "3994109866205639942",
+          "charCount": 35,
+          "interactions": 6286
+        },
+        {
+          "postId": "3992880350758034895",
+          "charCount": 45,
+          "interactions": 3735
+        },
+        {
+          "postId": "3992848258133212117",
+          "charCount": 102,
+          "interactions": 1222
+        },
+        {
+          "postId": "3992656615920546593",
+          "charCount": 34,
+          "interactions": 3973
+        },
+        {
+          "postId": "3988481471392330087",
+          "charCount": 169,
+          "interactions": 2413
+        },
+        {
+          "postId": "3987048990160038468",
+          "charCount": 236,
+          "interactions": 2334
+        },
+        {
+          "postId": "3981852126213720917",
+          "charCount": 322,
+          "interactions": 5599
+        },
+        {
+          "postId": "3977518562965884838",
+          "charCount": 205,
+          "interactions": 2181
+        },
+        {
+          "postId": "3976727027311504081",
+          "charCount": 173,
+          "interactions": 1884
+        },
+        {
+          "postId": "3976058885715452091",
+          "charCount": 160,
+          "interactions": 2033
+        },
+        {
+          "postId": "3960564644938666733",
+          "charCount": 292,
+          "interactions": 2676
+        },
+        {
+          "postId": "3960563624733395242",
+          "charCount": 170,
+          "interactions": 3557
+        },
+        {
+          "postId": "3957216315664483403",
+          "charCount": 323,
+          "interactions": 3465
+        },
+        {
+          "postId": "3951374784400118629",
+          "charCount": 195,
+          "interactions": 2247
+        },
+        {
+          "postId": "3937491905269768921",
+          "charCount": 127,
+          "interactions": 4271
+        },
+        {
+          "postId": "3925863854786722836",
+          "charCount": 145,
+          "interactions": 5822
+        },
+        {
+          "postId": "3920731152608519405",
+          "charCount": 81,
+          "interactions": 24100
+        },
+        {
+          "postId": "3916463816330783724",
+          "charCount": 406,
+          "interactions": 1319
+        },
+        {
+          "postId": "3915245417307232835",
+          "charCount": 350,
+          "interactions": 7413
+        },
+        {
+          "postId": "3906263078447871896",
+          "charCount": 175,
+          "interactions": 2817
+        },
+        {
+          "postId": "3896177221392711419",
+          "charCount": 281,
+          "interactions": 3587
+        },
+        {
+          "postId": "3886015488044874110",
+          "charCount": 223,
+          "interactions": 2198
+        },
+        {
+          "postId": "3870872187813562164",
+          "charCount": 94,
+          "interactions": 4285
+        }
+      ]
+    },
+    "postTypes": [
+      {
+        "type": "純文字",
+        "count": 20,
+        "share": 0.6667,
+        "avgInteractions": 4745.9,
+        "avgRate": 0.0135
+      },
+      {
+        "type": "含連結",
+        "count": 7,
+        "share": 0.2333,
+        "avgInteractions": 2160.7,
+        "avgRate": 0.0101
+      },
+      {
+        "type": "含 hashtag",
+        "count": 0,
+        "share": 0,
+        "avgInteractions": 0,
+        "avgRate": null
+      },
+      {
+        "type": "含 mention",
+        "count": 3,
+        "share": 0.1,
+        "avgInteractions": 4539.7,
+        "avgRate": 0.0115
+      },
+      {
+        "type": "混合",
+        "count": 0,
+        "share": 0,
+        "avgInteractions": 0,
+        "avgRate": null
+      }
+    ],
+    "hashtags": [],
+    "correlations": [
+      {
+        "metric": "length",
+        "rho": -0.33,
+        "n": 30
+      },
+      {
+        "metric": "hour",
+        "rho": -0.19,
+        "n": 30
+      },
+      {
+        "metric": "hasQuestion",
+        "rho": -0.05,
+        "n": 30
+      },
+      {
+        "metric": "hasLink",
+        "rho": -0.13,
+        "n": 30
+      }
+    ],
+    "keywords": [
+      {
+        "term": "muse",
+        "score": 2.7877
+      },
+      {
+        "term": "meta",
+        "score": 2.1829
+      },
+      {
+        "term": "connect",
+        "score": 1.7524
+      },
+      {
+        "term": "model",
+        "score": 1.2981
+      },
+      {
+        "term": "work",
+        "score": 1.1401
+      },
+      {
+        "term": "ai",
+        "score": 1.074
+      },
+      {
+        "term": "family",
+        "score": 0.8501
+      },
+      {
+        "term": "everyone",
+        "score": 0.845
+      },
+      {
+        "term": "coming",
+        "score": 0.7946
+      },
+      {
+        "term": "everything",
+        "score": 0.7465
+      },
+      {
+        "term": "spark",
+        "score": 0.7228
+      },
+      {
+        "term": "future",
+        "score": 0.6461
+      },
+      {
+        "term": "build",
+        "score": 0.6216
+      },
+      {
+        "term": "superintelligence",
+        "score": 0.6204
+      },
+      {
+        "term": "believe",
+        "score": 0.6182
+      },
+      {
+        "term": "first",
+        "score": 0.6156
+      },
+      {
+        "term": "wrote",
+        "score": 0.6125
+      },
+      {
+        "term": "positive",
+        "score": 0.6125
+      },
+      {
+        "term": "real",
+        "score": 0.5757
+      },
+      {
+        "term": "world",
+        "score": 0.5353
+      }
+    ],
+    "clusters": [
+      {
+        "name": "high",
+        "label": "ai・meta・available",
+        "keywords": [
+          "ai",
+          "meta",
+          "available"
+        ],
+        "postIds": [
+          "3920731152608519405",
+          "3915245417307232835",
+          "3925863854786722836",
+          "3981852126213720917",
+          "4020948437830849967",
+          "3996155940894885511",
+          "3994109866205639942",
+          "3937491905269768921",
+          "3870872187813562164",
+          "3992656615920546593"
+        ],
+        "samples": [
+          "3920731152608519405",
+          "3925863854786722836",
+          "3996155940894885511",
+          "3937491905269768921"
+        ]
+      },
+      {
+        "name": "mid",
+        "label": "1.2・app・everything",
+        "keywords": [
+          "1.2",
+          "app",
+          "everything"
+        ],
+        "postIds": [
+          "3960563624733395242",
+          "3896177221392711419",
+          "3992880350758034895",
+          "4006434140014576097",
+          "4024588638696309702",
+          "3957216315664483403",
+          "4023876994299759089",
+          "3906263078447871896",
+          "4006376160339141718",
+          "3960564644938666733"
+        ],
+        "samples": [
+          "3960563624733395242",
+          "3992880350758034895",
+          "3957216315664483403",
+          "3906263078447871896"
+        ]
+      },
+      {
+        "name": "low",
+        "label": "coming・cure・diseases",
+        "keywords": [
+          "coming",
+          "cure",
+          "diseases"
+        ],
+        "postIds": [
+          "3988481471392330087",
+          "3987048990160038468",
+          "3886015488044874110",
+          "3951374784400118629",
+          "3977518562965884838",
+          "3976058885715452091",
+          "3916463816330783724",
+          "3976727027311504081",
+          "4026926512892651125",
+          "3992848258133212117"
+        ],
+        "samples": [
+          "3988481471392330087",
+          "3886015488044874110",
+          "3976058885715452091",
+          "3976727027311504081"
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "high",
+        "label": "ai・meta・available",
+        "count": 10,
+        "avgLikes": 5022,
+        "avgReplies": 1681.6,
+        "profile": [
+          {
+            "key": "charCount",
+            "label": "字數",
+            "value": 157.2,
+            "overall": 173.5
+          },
+          {
+            "key": "sentences",
+            "label": "句數",
+            "value": 1.4,
+            "overall": 1.5
+          },
+          {
+            "key": "firstPerson",
+            "label": "第一人稱密度（每百字「我」）",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "endsWithQuestion",
+            "label": "結尾提問",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "numbers",
+            "label": "具體數字",
+            "value": 0.7,
+            "overall": 0.8
+          },
+          {
+            "key": "dialogue",
+            "label": "對話",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "narrative",
+            "label": "敘事時間標記",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "quoteStyle",
+            "label": "引言型",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "emotion",
+            "label": "情緒詞",
+            "value": 0,
+            "overall": 0
+          }
+        ],
+        "summary": "高互動群的文本特徵接近全體平均。群內區辨詞：ai、meta、available。",
+        "samples": [
+          {
+            "postId": "3920731152608519405",
+            "url": "https://www.threads.com/@zuck/post/DZpPDXbCeTt",
+            "excerpt": "500M monthly actives on Threads in less than 3 years. Thanks…",
+            "likes": 18078,
+            "replies": 4695,
+            "interactions": 24100,
+            "features": {
+              "charCount": 81,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 2,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：句子較少（1 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3925863854786722836",
+            "url": "https://www.threads.com/@zuck/post/DZ7eGA1G7wU",
+            "excerpt": "Our new line of @metaglasses is available today. Three shape…",
+            "likes": 3835,
+            "replies": 1376,
+            "interactions": 5822,
+            "features": {
+              "charCount": 145,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 1,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：句子較少（1 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3996155940894885511",
+            "url": "https://www.threads.com/@zuck/post/Dd1MqfcG0aH",
+            "excerpt": "We believe superintelligence will create significant new opp…",
+            "likes": 2805,
+            "replies": 2603,
+            "interactions": 5906,
+            "features": {
+              "charCount": 310,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：句子較少（1 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3937491905269768921",
+            "url": "https://www.threads.com/@zuck/post/DakyAavlKLZ",
+            "excerpt": "Today we're releasing Muse Spark 1.1 -- a strong agentic and…",
+            "likes": 2995,
+            "replies": 822,
+            "interactions": 4271,
+            "features": {
+              "charCount": 127,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 1,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：句子較少（1 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "mid",
+        "label": "1.2・app・everything",
+        "count": 10,
+        "avgLikes": 2221.7,
+        "avgReplies": 590.8,
+        "profile": [
+          {
+            "key": "charCount",
+            "label": "字數",
+            "value": 169.9,
+            "overall": 173.5
+          },
+          {
+            "key": "sentences",
+            "label": "句數",
+            "value": 1.3,
+            "overall": 1.5
+          },
+          {
+            "key": "firstPerson",
+            "label": "第一人稱密度（每百字「我」）",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "endsWithQuestion",
+            "label": "結尾提問",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "numbers",
+            "label": "具體數字",
+            "value": 0.3,
+            "overall": 0.8
+          },
+          {
+            "key": "dialogue",
+            "label": "對話",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "narrative",
+            "label": "敘事時間標記",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "quoteStyle",
+            "label": "引言型",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "emotion",
+            "label": "情緒詞",
+            "value": 0,
+            "overall": 0
+          }
+        ],
+        "summary": "中互動群與全體差最多的是：具體數字 0.3（全體 0.8）。群內區辨詞：1.2、app、everything。",
+        "samples": [
+          {
+            "postId": "3960563624733395242",
+            "url": "https://www.threads.com/@zuck/post/Db2v6H6kUkq",
+            "excerpt": "I believe everyone should have access to superintelligence, …",
+            "likes": 2220,
+            "replies": 964,
+            "interactions": 3557,
+            "features": {
+              "charCount": 170,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "加分：句子較少（1 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3992880350758034895",
+            "url": "https://www.threads.com/@zuck/post/Ddpj4YZkd3P",
+            "excerpt": "Here's everything I announced at Meta Connect today 👇",
+            "likes": 2764,
+            "replies": 630,
+            "interactions": 3735,
+            "features": {
+              "charCount": 45,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "加分：句子較少（1 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3957216315664483403",
+            "url": "https://www.threads.com/@zuck/post/Dbq20Xaj8RL",
+            "excerpt": "Announcing Muse Code beta, our multi-agent coding harness, a…",
+            "likes": 2660,
+            "replies": 316,
+            "interactions": 3465,
+            "features": {
+              "charCount": 323,
+              "sentences": 3,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 1,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "扣分：句子較多（3 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3906263078447871896",
+            "url": "https://www.threads.com/@zuck/post/DY11ZLWG_eY",
+            "excerpt": "Today Biohub is sharing a major scientific advance: our firs…",
+            "likes": 2105,
+            "replies": 482,
+            "interactions": 2817,
+            "features": {
+              "charCount": 175,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "加分：句子較少（1 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "low",
+        "label": "coming・cure・diseases",
+        "count": 10,
+        "avgLikes": 1436.7,
+        "avgReplies": 285.8,
+        "profile": [
+          {
+            "key": "charCount",
+            "label": "字數",
+            "value": 193.3,
+            "overall": 173.5
+          },
+          {
+            "key": "sentences",
+            "label": "句數",
+            "value": 1.8,
+            "overall": 1.5
+          },
+          {
+            "key": "firstPerson",
+            "label": "第一人稱密度（每百字「我」）",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "endsWithQuestion",
+            "label": "結尾提問",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "numbers",
+            "label": "具體數字",
+            "value": 1.3,
+            "overall": 0.8
+          },
+          {
+            "key": "dialogue",
+            "label": "對話",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "narrative",
+            "label": "敘事時間標記",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "quoteStyle",
+            "label": "引言型",
+            "value": 0,
+            "overall": 0
+          },
+          {
+            "key": "emotion",
+            "label": "情緒詞",
+            "value": 0,
+            "overall": 0
+          }
+        ],
+        "summary": "低互動群與全體差最多的是：具體數字 1.3（全體 0.8）；句數 1.8（全體 1.5）。群內區辨詞：coming、cure、diseases。",
+        "samples": [
+          {
+            "postId": "3988481471392330087",
+            "url": "https://www.threads.com/@zuck/post/DdZ7sQvkTFn",
+            "excerpt": "Muse for Mac is out today! It works across apps, files, cale…",
+            "likes": 1859,
+            "replies": 309,
+            "interactions": 2413,
+            "features": {
+              "charCount": 169,
+              "sentences": 2,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "failure",
+            "reasons": [
+              "扣分：句子較多（2 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3886015488044874110",
+            "url": "https://www.threads.com/@zuck/post/DXt5n9UlLl-",
+            "excerpt": "As part of our philanthropic work to help cure all diseases,…",
+            "likes": 1611,
+            "replies": 417,
+            "interactions": 2198,
+            "features": {
+              "charCount": 223,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "failure",
+            "reasons": [
+              "文本特徵與全體差異不大，互動偏低可能來自主題或發文時機"
+            ]
+          },
+          {
+            "postId": "3976058885715452091",
+            "url": "https://www.threads.com/@zuck/post/DctzH2RGuC7",
+            "excerpt": "Muse Code is out of beta and now built to handle bigger, mor…",
+            "likes": 1553,
+            "replies": 259,
+            "interactions": 2033,
+            "features": {
+              "charCount": 160,
+              "sentences": 2,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "failure",
+            "reasons": [
+              "扣分：句子較多（2 句，全體平均 1.5）（此特徵與互動 ρ=-0.19）"
+            ]
+          },
+          {
+            "postId": "3976727027311504081",
+            "url": "https://www.threads.com/@zuck/post/DcwLClnmOrR",
+            "excerpt": "Muse Voice Transcribe is MSL's first real-time audio percept…",
+            "likes": 1440,
+            "replies": 208,
+            "interactions": 1884,
+            "features": {
+              "charCount": 173,
+              "sentences": 1,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "failure",
+            "reasons": [
+              "文本特徵與全體差異不大，互動偏低可能來自主題或發文時機"
+            ]
+          }
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "title": "「純文字」貼文的互動高於「含連結」",
+        "detail": "在可比較的類型裡，純文字平均互動是含連結的 2.2 倍。",
+        "evidence": "純文字 20 篇平均 4,745.9；含連結 7 篇平均 2,160.7；含 mention 3 篇平均 4,539.7"
+      },
+      {
+        "title": "短文（100 字以下）表現最好",
+        "detail": "字數和互動的 Spearman 相關為 -0.09。短文平均互動是中篇的 2.1 倍，篇幅可以往這個區間靠攏。",
+        "evidence": "短文 9 篇平均 6,028.9；中篇 14 篇平均 2,816.9；長文 7 篇平均 4,280.7（只比較 3 篇以上的篇幅）"
+      },
+      {
+        "title": "週二發的貼文平均互動最高",
+        "detail": "在有 3 篇以上的日子裡，週二的平均互動最高。重要內容可以優先排在週二，再觀察是否穩定。",
+        "evidence": "週二 6 篇平均互動 7,349.7；全體平均 4,122.1（1.8 倍）"
+      }
+    ]
+  }
+}

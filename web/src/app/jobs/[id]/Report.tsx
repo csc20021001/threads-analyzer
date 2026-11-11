@@ -3,6 +3,8 @@ import { BarChart, ScatterChart } from './Charts';
 
 const pct = (x: number | null | undefined, d = 2) => (x == null ? '—' : `${(x * 100).toFixed(d)}%`);
 const num = (x: number | null | undefined) => (x == null ? '—' : x.toLocaleString('en-US'));
+/** 圖表柱子上方的小字：千以上縮寫成 k，避免數字擠在一起 */
+const short = (x: number) => (x >= 1000 ? `${(x / 1000).toFixed(1)}k` : String(Math.round(x * 10) / 10));
 const CLUSTER: Record<string, string> = { high: '高互動群', mid: '中互動群', low: '低互動群' };
 const VERDICT: Record<string, { label: string; tone: string }> = {
   success: { label: '成功原因', tone: 'ok' },
@@ -98,7 +100,7 @@ export function Report({
             title="星期幾發文"
             subtitle="柱高為篇數，上方數字為該天平均總互動"
             unit="篇"
-            data={timeDist.byWeekday.map((b) => ({ label: b.label.replace('週', ''), value: b.count, note: b.count ? String(b.avgInteractions) : undefined }))}
+            data={timeDist.byWeekday.map((b) => ({ label: b.label.replace('週', ''), value: b.count, note: b.count ? short(b.avgInteractions) : undefined }))}
           />
           <BarChart
             title="幾點發文"
@@ -106,7 +108,7 @@ export function Report({
             unit="篇"
             labelEvery={3}
             alt
-            data={timeDist.byHour.map((b) => ({ label: String(b.key), value: b.count, note: b.count ? String(b.avgInteractions) : undefined }))}
+            data={timeDist.byHour.map((b) => ({ label: String(b.key), value: b.count, note: b.count ? short(b.avgInteractions) : undefined }))}
           />
         </div>
       </section>
@@ -129,7 +131,7 @@ export function Report({
             title="貼文類型"
             subtitle="柱高為篇數，上方數字為平均總互動"
             unit="篇"
-            data={postTypes.map((t) => ({ label: t.type, value: t.count, note: t.count ? String(t.avgInteractions) : undefined }))}
+            data={postTypes.map((t) => ({ label: t.type, value: t.count, note: t.count ? short(t.avgInteractions) : undefined }))}
           />
         </div>
       </section>

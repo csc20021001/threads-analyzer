@@ -170,38 +170,64 @@ export function buildObservations(input: {
   const { posts, overview: ov, timeDist, lengthRel, postTypes } = input;
   const avg = (ps: CleanPost[]) => mean(ps.map((p) => p.interactions));
   const fmt = (x: number) => r1(x).toLocaleString('en-US');
+  const med = (ps: CleanPost[]) => {
+    const s = ps.map((p) => p.interactions).sort((a, b) => a - b);
+    const m = Math.floor(s.length / 2);
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  };
+  /** 比較的兩組都至少要有這麼多篇，避免 1–2 篇的極端值撐出很大的倍數 */
+  const MIN_N = 3;
+  /**
+   * 比較兩組：平均數容易被一兩篇爆文拉高，所以同時看中位數。
+   * 中位數也同方向差 1.5 倍以上才算「穩健」；排序用中位數倍數，避免爆文撐出的倍數排到最前面。
+   */
+  const compare = (a: CleanPost[], b: CleanPost[]) => {
+    const lift = avg(a) / avg(b);
+    const ma = med(a), mb = med(b);
+    const medLift = mb > 0 ? ma / mb : ma > 0 ? Infinity : 1;
+    const robust = (lift >= 1 && medLift >= 1.5) || (lift < 1 && medLift <= 1 / 1.5);
+    return { lift, robust, rankLift: robust ? lift : Math.min(Math.max(medLift, 1 / 1.2), 1.2) };
+  };
   const cands: Candidate[] = [];
   const profiles = posts.map((p) => ({ p, f: textProfile(p.text) }));
 
   const q = profiles.filter((x) => x.f.endsWithQuestion).map((x) => x.p);
   const nq = profiles.filter((x) => !x.f.endsWithQuestion).map((x) => x.p);
-  if (q.length >= 2 && nq.length >= 2 && avg(nq) > 0) {
-    const lift = avg(q) / avg(nq);
+  if (q.length >= MIN_N && nq.length >= MIN_N && avg(nq) > 0) {
+    const c = compare(q, nq);
     cands.push({
-      lift,
-      title: lift >= 1 ? '結尾提問的貼文互動較高' : '結尾提問沒有帶來更多互動',
-      detail: lift >= 1
-        ? '以問句收尾等於給讀者一個回覆的理由。建議在故事型貼文最後加一句和讀者經驗相關的問題。'
-        : '這個帳號的提問結尾沒有拉高互動，讀者更在意內容本身；與其硬加問句，不如把故事寫完整。',
-      evidence: `結尾提問 ${q.length} 篇平均互動 ${fmt(avg(q))}；其餘 ${nq.length} 篇平均 ${fmt(avg(nq))}（${r1(lift)} 倍）`,
+      lift: c.rankLift,
+      title: c.robust
+        ? (c.lift >= 1 ? '結尾提問的貼文互動較高' : '結尾提問沒有帶來更多互動')
+        : '結尾提問的效果不明確',
+      detail: !c.robust
+        ? '平均值有差距，但中位數相近，差距主要來自個別爆文；目前還不能說問句結尾本身有效，可以刻意測試幾篇再看。'
+        : c.lift >= 1
+          ? '以問句收尾等於給讀者一個回覆的理由。建議在故事型貼文最後加一句和讀者經驗相關的問題。'
+          : '這個帳號的提問結尾沒有拉高互動，讀者更在意內容本身；與其硬加問句，不如把故事寫完整。',
+      evidence: `結尾提問 ${q.length} 篇平均互動 ${fmt(avg(q))}（中位數 ${fmt(med(q))}）；其餘 ${nq.length} 篇平均 ${fmt(avg(nq))}（中位數 ${fmt(med(nq))}）；平均相差 ${r1(c.lift)} 倍`,
     });
   }
 
   const story = profiles.filter((x) => x.f.narrative >= 2 && !x.f.quoteStyle).map((x) => x.p);
   const quote = profiles.filter((x) => x.f.quoteStyle).map((x) => x.p);
-  if (story.length >= 2 && quote.length >= 2 && avg(quote) > 0) {
-    const lift = avg(story) / avg(quote);
+  if (story.length >= MIN_N && quote.length >= MIN_N && avg(quote) > 0) {
+    const c = compare(story, quote);
     cands.push({
-      lift,
-      title: lift >= 1 ? '個人故事明顯勝過名言摘錄' : '名言摘錄的表現不輸個人故事',
-      detail: lift >= 1
-        ? '有時間線、有具體細節的個人經驗，比轉貼名言更能引起共鳴。名言可以保留作為過渡，但主力應放在故事。'
-        : '短句名言在這個帳號也有不錯的表現，可作為低成本的穩定內容，和長篇故事交替。',
-      evidence: `故事型 ${story.length} 篇平均互動 ${fmt(avg(story))}；引言型 ${quote.length} 篇平均 ${fmt(avg(quote))}（${r1(lift)} 倍）`,
+      lift: c.rankLift,
+      title: !c.robust
+        ? (c.lift >= 1 ? '故事型平均較高，但靠的是少數爆文' : '名言摘錄平均較高，但靠的是少數爆文')
+        : c.lift >= 1 ? '個人故事明顯勝過名言摘錄' : '名言摘錄的表現不輸個人故事',
+      detail: !c.robust
+        ? '兩種寫法的中位數相近：一般貼文表現差不多，差距來自少數爆文。爆文多出現在哪一種寫法，就值得多寫那一種，但不要把平均差距當成每篇都會有的效果。'
+        : c.lift >= 1
+          ? '有時間線、有具體細節的個人經驗，比轉貼名言更能引起共鳴。名言可以保留作為過渡，但主力應放在故事。'
+          : '短句名言在這個帳號也有不錯的表現，可作為低成本的穩定內容，和長篇故事交替。',
+      evidence: `故事型 ${story.length} 篇平均互動 ${fmt(avg(story))}（中位數 ${fmt(med(story))}）；引言型 ${quote.length} 篇平均 ${fmt(avg(quote))}（中位數 ${fmt(med(quote))}）；平均相差 ${r1(c.lift)} 倍`,
     });
   }
 
-  const lb = lengthRel.buckets.filter((b) => b.count >= 2);
+  const lb = lengthRel.buckets.filter((b) => b.count >= MIN_N);
   if (lb.length >= 2) {
     const best = lb.reduce((a, b) => (b.avgInteractions > a.avgInteractions ? b : a));
     const worst = lb.reduce((a, b) => (b.avgInteractions < a.avgInteractions ? b : a));
@@ -211,23 +237,28 @@ export function buildObservations(input: {
         lift,
         title: `${best.label}（${best.range}）表現最好`,
         detail: `字數和互動的 Spearman 相關為 ${lengthRel.rhoInteractions ?? '—'}。${best.label}平均互動是${worst.label}的 ${r1(lift)} 倍，篇幅可以往這個區間靠攏。`,
-        evidence: lb.map((b) => `${b.label} ${b.count} 篇平均 ${fmt(b.avgInteractions)}`).join('；'),
+        evidence: lengthRel.buckets.map((b) => `${b.label} ${b.count} 篇平均 ${fmt(b.avgInteractions)}`).join('；') + `（只比較 ${MIN_N} 篇以上的篇幅）`,
       });
     }
   }
 
-  if (timeDist.bestHour && ov.avgInteractions > 0) {
-    const h = timeDist.bestHour;
+  const hours = timeDist.byHour.filter((b) => b.count >= MIN_N);
+  if (hours.length >= 2 && ov.avgInteractions > 0) {
+    const h = hours.reduce((a, b) => (b.avgInteractions > a.avgInteractions ? b : a));
     const lift = h.avgInteractions / ov.avgInteractions;
-    cands.push({
+    const busiest = timeDist.busiestHour?.key;
+    // 最好的時段若沒有明顯高於全體平均（例如被一兩篇爆文拉高的整體平均），就不算一個發現
+    if (lift >= 1.2) cands.push({
       lift,
       title: `${h.key} 點發文的平均互動最高`,
-      detail: `最常發文的時段是 ${timeDist.busiestHour?.key ?? '—'} 點，但互動最好的是 ${h.key} 點。可以把重點貼文排在這個時段測試；樣本數少，需要持續觀察。`,
+      detail: busiest === h.key
+        ? `${h.key} 點既是最常發文的時段，也是互動最好的時段，目前的排程可以維持。`
+        : `最常發文的時段是 ${busiest ?? '—'} 點，但互動最好的是 ${h.key} 點（只比較有 ${MIN_N} 篇以上的時段）。可以把重點貼文排在這個時段測試；樣本仍少，需要持續觀察。`,
       evidence: `${h.key} 點 ${h.count} 篇平均互動 ${fmt(h.avgInteractions)}；全體平均 ${fmt(ov.avgInteractions)}（${r1(lift)} 倍）`,
     });
   }
 
-  const types = postTypes.filter((t) => t.count >= 2);
+  const types = postTypes.filter((t) => t.count >= MIN_N);
   if (types.length >= 2) {
     const best = types.reduce((a, b) => (b.avgInteractions > a.avgInteractions ? b : a));
     const worst = types.reduce((a, b) => (b.avgInteractions < a.avgInteractions ? b : a));
@@ -246,6 +277,36 @@ export function buildObservations(input: {
       title: '幾乎全是純文字貼文',
       detail: '這個帳號很少使用連結、hashtag 或標記他人，曝光主要靠內容本身被轉分享。可以小量測試 Threads 主題標籤來接觸新讀者。',
       evidence: `純文字 ${postTypes[0].count} 篇，占 ${r1(postTypes[0].share * 100)}%`,
+    });
+  }
+
+  const days = timeDist.byWeekday.filter((b) => b.count >= MIN_N);
+  if (days.length >= 2 && ov.avgInteractions > 0) {
+    const d = days.reduce((a, b) => (b.avgInteractions > a.avgInteractions ? b : a));
+    const lift = d.avgInteractions / ov.avgInteractions;
+    if (lift >= 1.2) cands.push({
+      lift,
+      title: `${d.label}發的貼文平均互動最高`,
+      detail: `在有 ${MIN_N} 篇以上的日子裡，${d.label}的平均互動最高。重要內容可以優先排在${d.label}，再觀察是否穩定。`,
+      evidence: `${d.label} ${d.count} 篇平均互動 ${fmt(d.avgInteractions)}；全體平均 ${fmt(ov.avgInteractions)}（${r1(lift)} 倍）`,
+    });
+  }
+
+  // 互動是否集中在少數爆文：前 3 篇占總互動的比例，對照「平均分配」時應有的比例
+  const total = posts.reduce((s, p) => s + p.interactions, 0);
+  if (posts.length >= 6 && total > 0) {
+    const top3 = [...posts].sort((a, b) => b.interactions - a.interactions).slice(0, 3);
+    const share = top3.reduce((s, p) => s + p.interactions, 0) / total;
+    const even = 3 / posts.length;
+    const concentrated = share >= 0.5;
+    cands.push({
+      // 不集中時只當備案：其他發現不足 3 點才會被選上
+      lift: concentrated ? share / even : 1.01,
+      title: concentrated ? '互動高度集中在少數爆文' : '互動沒有被單篇爆文主導',
+      detail: concentrated
+        ? '平均值會被少數爆文拉高，判斷單篇表現時應同時看中位數。值得回頭拆解這幾篇爆文的主題與寫法，找出可以複製的部分。'
+        : '前幾名貼文的占比不到一半，整體表現不是靠單篇撐起來的；要再往上，可以刻意設計容易被分享的題材。',
+      evidence: `互動最高的 3 篇占全部 ${posts.length} 篇總互動的 ${r1(share * 100)}%（平均分配應約 ${r1(even * 100)}%）；中位數 ${fmt(ov.medianInteractions)}，平均 ${fmt(ov.avgInteractions)}`,
     });
   }
 

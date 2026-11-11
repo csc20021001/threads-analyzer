@@ -55,6 +55,7 @@ cp .env.example web/.env.local    # 網站用（只需要 NEXT_PUBLIC_ 開頭的
 | worker（Docker 一鍵啟動） | `docker compose up --build` |
 | 不經網站直接出報告 | `npm run report -w worker -- emoless_com` |
 | 用已存的資料重出報告 | `npm run report -w worker -- emoless_com --from data/emoless_com_2026-11-11.json` |
+| 把網站 worker 爬到的資料存成檔案 | `cd worker && npx tsx --env-file=../.env src/export-cache.ts emoless_com`（讀 Supabase 的 scrape_cache，寫到 `data/`） |
 | 檢查 Supabase 設定 | `npm run check -w worker` |
 | 爬取可行性實測 | `npm run probe -w worker -- emoless_com` |
 | 單元測試 | `npm test` |
@@ -124,7 +125,7 @@ cp .env.example web/.env.local    # 網站用（只需要 NEXT_PUBLIC_ 開頭的
 | 關鍵字 | `Intl.Segmenter` 中文斷詞、去停用詞後以 TF-IDF 排序，只列出現在 2 篇以上的詞 |
 | 分群 | 讚數與回覆數各取百分位排名後平均，依分數三等分為高、中、低互動群；每群用「本群常見、他群少見」的詞命名 |
 | 分群 NLP 分析 | 每群等距取 3–5 篇代表貼文，每篇都用同一套文本特徵（字數、句數、第一人稱密度、結尾提問、具體數字、對話、敘事時間標記、引言型、情緒詞）；以全體貼文的 Spearman 相關決定各特徵的加減分方向，取偏離全體平均最多的項目寫成成功／失敗原因 |
-| 內容策略觀察 | 從「結尾提問 vs 否」「故事 vs 引言」「篇幅」「發文時段」「貼文類型」中挑差距倍數最大的 3 項，附上計算依據 |
+| 內容策略觀察 | 從「結尾提問 vs 否」「故事 vs 引言」「篇幅」「發文時段」「星期」「貼文類型」「互動是否集中在少數爆文」中挑差距倍數最大的 3 項，附上計算依據。每組至少 3 篇才比較；兩組比較同時看平均和中位數，中位數沒有同方向差 1.5 倍以上時，標題會寫明「靠的是少數爆文」或「效果不明確」，不寫成穩定規律 |
 
 ## Supabase 資料表
 

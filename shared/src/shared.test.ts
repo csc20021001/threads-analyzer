@@ -82,6 +82,11 @@ test('tokenize drops stopwords and urls', () => {
   assert.ok(!t.some((w) => w.includes('http')));
 });
 
+test('tokenize drops common English function words, keeps content words', () => {
+  const t = tokenize('Today we’re sharing our new model at Meta Connect, get yours');
+  assert.deepEqual(t, ['sharing', 'model', 'meta', 'connect']);
+});
+
 test('distinctiveTerms picks words common in group but rare outside', () => {
   const inG = ['今天去爬山', '週末爬山好累', '爬山看日出', '晚餐吃拉麵'];
   const outG = ['工作好忙', '開會開到晚上', '今天又加班', '工作效率'];
@@ -124,6 +129,27 @@ test('analyze produces every required block', () => {
     for (const s of g.samples) assert.ok(s.reasons.length >= 1);
   }
   assert.ok(r.observations.length >= 1 && r.observations.length <= 3);
+});
+
+test('real scraped data: 3 observations, none built on tiny groups or driven only by outliers', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const { resolve } = await import('node:path');
+  for (const name of ['emoless_com_2026-11-11', 'zuck_2026-11-11']) {
+    const file = resolve(import.meta.dirname, '../../data', `${name}.json`);
+    const raw = JSON.parse(await readFile(file, 'utf8')).posts as Post[];
+    const r = analyze(raw);
+    assert.equal(r.observations.length, 3, name);
+    for (const o of r.observations) {
+      // 依據裡每個「N 篇」的組別都至少 3 篇（篇幅、類型的完整列表除外，那些標明只比較 3 篇以上）
+      if (!o.evidence.includes('只比較') && !o.evidence.includes('平均分配')) {
+        for (const m of o.evidence.matchAll(/(\d+) 篇/g)) assert.ok(Number(m[1]) >= 3, `${name}：${o.evidence}`);
+      }
+      assert.ok(!/明顯/.test(o.title) || !/中位數 (\d+(\.\d+)?)）；引言型 \d+ 篇平均 [\d,.]+（中位數 \1）/.test(o.evidence));
+    }
+  }
+  const emo = analyze(JSON.parse(await readFile(resolve(import.meta.dirname, '../../data/emoless_com_2026-11-11.json'), 'utf8')).posts);
+  const story = emo.observations.find((o) => o.evidence.startsWith('故事型'));
+  if (story) assert.ok(story.title.includes('爆文'), `中位數 8 對 6.5 不該寫成明顯勝過：${story.title}`);
 });
 
 test('analyze falls back to interactions when views missing', () => {

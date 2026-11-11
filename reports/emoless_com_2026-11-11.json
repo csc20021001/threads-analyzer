@@ -1,24 +1,23 @@
 {
   "meta": {
     "username": "emoless_com",
-    "fetchedAt": "2026-11-11T10:31:23.378Z",
+    "fetchedAt": "2026-11-11T12:03:21.106Z",
     "source": "playwright",
-    "stoppedBy": "enough",
-    "loggedIn": true
+    "via": "scrape_cache"
   },
   "result": {
     "summary": {
       "postCount": 30,
-      "viewsCoverage": 1,
+      "viewsCoverage": 0.9667,
       "rankedBy": "rate",
-      "rateMinViews": 207
+      "rateMinViews": 233
     },
     "cleaning": {
       "inputCount": 30,
       "duplicatesRemoved": 0,
       "missing": {
         "postedAt": 0,
-        "views": 0,
+        "views": 1,
         "text": 0,
         "url": 0
       }
@@ -32,50 +31,26 @@
       "avgReposts": 0.2,
       "avgQuotes": 0.1,
       "avgShares": 3.1,
-      "avgViews": 13650,
+      "avgViews": 14120,
       "avgInteractions": 55.6,
       "medianInteractions": 4.5,
       "overallRate": 0.0041,
-      "viewsCoverage": 1
+      "viewsCoverage": 0.9667
     },
     "top5": [
       {
-        "links": [],
-        "mentions": [],
-        "postId": "4026223883019978910",
-        "url": "https://www.threads.com/@emoless_com/post/DfgBUotmYie",
-        "text": "「妳幫我穿一下。」\n阿嬤把針遞過來，我坐到她旁邊。\n以前都是我拿衣服給她。\n褲腳往上改兩公分，裙子的勾子鬆了，她瞇一下眼睛就穿好了。\n今天她試了六次。\n線頭都起毛了。\n她說這支針不好。\n換一支。\n還是一樣。\n桌上有塊喜餅盒上的磁鐵，她拿來吸掉到桌邊的針，吸了兩次。\n我把線穿過去。\n她問用什麼顏色。\n我說咖啡色。\n她說妳這件是黑的。\n我說算了，裡面看不到。\n她把褲子翻過來，摸著接縫，問我要改多少。",
-        "postedAt": "2026-11-09T00:15:20.000Z",
-        "likes": 0,
-        "replies": 4,
-        "reposts": 0,
-        "quotes": 0,
-        "shares": 0,
-        "views": 207,
-        "postedAtLocal": "2026-11-09 08:15",
-        "weekday": 1,
-        "hour": 8,
-        "charCount": 184,
-        "hashtags": [],
-        "mentionList": [],
-        "urlCount": 0,
-        "postType": "純文字",
-        "interactions": 4,
-        "rate": 0.01932367149758454
-      },
-      {
-        "links": [],
-        "mentions": [],
-        "postId": "4024888574667396568",
         "url": "https://www.threads.com/@emoless_com/post/DfbRtV5lBXY",
         "text": "「你要做一個不動聲色的大人了。不准情緒化，不准偷偷想念，不准回頭看。去過自己另外的生活。」\n\n—— 村上春樹《舞·舞·舞》",
-        "postedAt": "2026-11-07T04:02:18.000Z",
         "likes": 60,
-        "replies": 0,
-        "reposts": 1,
+        "links": [],
+        "views": 4367,
+        "postId": "4024888574667396568",
         "quotes": 1,
         "shares": 1,
-        "views": 4367,
+        "replies": 0,
+        "reposts": 1,
+        "mentions": [],
+        "postedAt": "2026-11-07T04:02:18.000Z",
         "postedAtLocal": "2026-11-07 12:02",
         "weekday": 6,
         "hour": 12,
@@ -88,18 +63,18 @@
         "rate": 0.014426379665674376
       },
       {
-        "links": [],
-        "mentions": [],
-        "postId": "4027428311437850493",
         "url": "https://www.threads.com/@emoless_com/post/DfkTLYFmrd9",
         "text": "「生活不需要比別人好，但一定要比以前好；步履不停，便自會有屬於你的花期。」",
-        "postedAt": "2026-11-10T16:08:19.000Z",
         "likes": 8,
-        "replies": 0,
-        "reposts": 1,
+        "links": [],
+        "views": 636,
+        "postId": "4027428311437850493",
         "quotes": 0,
         "shares": 0,
-        "views": 635,
+        "replies": 0,
+        "reposts": 1,
+        "mentions": [],
+        "postedAt": "2026-11-10T16:08:19.000Z",
         "postedAtLocal": "2026-11-11 00:08",
         "weekday": 3,
         "hour": 0,
@@ -109,21 +84,21 @@
         "urlCount": 0,
         "postType": "純文字",
         "interactions": 9,
-        "rate": 0.014173228346456693
+        "rate": 0.014150943396226415
       },
       {
-        "links": [],
-        "mentions": [],
-        "postId": "4027317077002678111",
         "url": "https://www.threads.com/@emoless_com/post/Dfj54s8m-9f",
         "text": "我四年級那張聯絡資料，記得幾件事。\n第一，媽媽再婚，我還是寫原本的姓。\n第二，緊急聯絡人有兩格電話號碼。\n她先生問我要不要填他，我說不要，我會打給外婆。\n他說好。\n第三，白板筆忘了蓋，那天我被老師念了。\n這個沒關係。\n真正有關係的是，運動會下雨，我們在走廊等家長。\n他來了。\n手上兩件雨衣。\n他沒有走進班上，只站在鞋櫃旁邊問，妳要跟我回去，還是等外婆？\n我說外婆膝蓋會痛。\n他點頭，把其中一件雨衣抖開，讓我自己伸手。",
-        "postedAt": "2026-11-10T12:27:19.000Z",
         "likes": 1,
-        "replies": 4,
-        "reposts": 0,
+        "links": [],
+        "views": 558,
+        "postId": "4027317077002678111",
         "quotes": 0,
         "shares": 0,
-        "views": 552,
+        "replies": 4,
+        "reposts": 0,
+        "mentions": [],
+        "postedAt": "2026-11-10T12:27:19.000Z",
         "postedAtLocal": "2026-11-10 20:27",
         "weekday": 2,
         "hour": 20,
@@ -133,21 +108,21 @@
         "urlCount": 0,
         "postType": "純文字",
         "interactions": 5,
-        "rate": 0.009057971014492754
+        "rate": 0.008960573476702509
       },
       {
-        "links": [],
-        "mentions": [],
-        "postId": "4027078007596546928",
         "url": "https://www.threads.com/@emoless_com/post/DfjDhyNlHtw",
         "text": "四點五十分，我在幼兒園門口滑到婆婆的貼文。\n她說阿嬤只是高興，朋友一直問孫子，照片放上去方便看，也沒有拿去賣。\n我知道她的意思。\n我媽也很想給人看。\n但我往下滑，三十七張裡面有孩子洗澡的照片。\n蓮蓬頭還入鏡。\n澡盆下面那張小鴨貼紙翹起來了，我昨天才想撕。\n我停在那裡。\n她設公開。\n我問能不能撤掉。\n她說小孩子哪有人在看這個，妳想太多。\n我打開留言，有一個我沒見過的人，問她孫女讀哪一間。",
-        "postedAt": "2026-11-10T04:32:20.000Z",
         "likes": 0,
-        "replies": 4,
-        "reposts": 0,
+        "links": [],
+        "views": 475,
+        "postId": "4027078007596546928",
         "quotes": 0,
         "shares": 0,
-        "views": 473,
+        "replies": 4,
+        "reposts": 0,
+        "mentions": [],
+        "postedAt": "2026-11-10T04:32:20.000Z",
         "postedAtLocal": "2026-11-10 12:32",
         "weekday": 2,
         "hour": 12,
@@ -157,7 +132,31 @@
         "urlCount": 0,
         "postType": "純文字",
         "interactions": 4,
-        "rate": 0.008456659619450317
+        "rate": 0.008421052631578947
+      },
+      {
+        "url": "https://www.threads.com/@emoless_com/post/DfiNgtlj3w4",
+        "text": "阿嬤住進照護機構後，我通常星期日下午去看她。第一次帶了一大袋水果，護理人員說不用這麼多，吃不完，切好的也不方便放。我有點尷尬，拎回來一半，後來就只買一根香蕉、一小盒她喜歡的蛋糕。她剛開始每次都問什麼時候回家，我說等身體好一點。講了幾次，她不太問了，改成問家裡的瓦斯關了沒、後門有沒有鎖。我說都有，她就點點頭，過一會兒又想起別的。\n她以前很會記人。",
+        "likes": 5,
+        "links": [],
+        "views": 1071,
+        "postId": "4026840439399087160",
+        "quotes": 0,
+        "shares": 0,
+        "replies": 3,
+        "reposts": 0,
+        "mentions": [],
+        "postedAt": "2026-11-09T20:40:21.000Z",
+        "postedAtLocal": "2026-11-10 04:40",
+        "weekday": 2,
+        "hour": 4,
+        "charCount": 172,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 8,
+        "rate": 0.007469654528478058
       }
     ],
     "timeDist": {
@@ -378,21 +377,21 @@
     },
     "lengthRel": {
       "rhoInteractions": 0.16,
-      "rhoRate": -0.18,
+      "rhoRate": -0.22,
       "buckets": [
         {
           "label": "短文",
           "range": "100 字以下",
           "count": 7,
           "avgInteractions": 20.1,
-          "avgRate": 0.0233
+          "avgRate": 0.0212
         },
         {
           "label": "中篇",
           "range": "101–250 字",
           "count": 21,
           "avgInteractions": 72.5,
-          "avgRate": 0.0228
+          "avgRate": 0.0165
         },
         {
           "label": "長文",
@@ -561,7 +560,7 @@
         "count": 30,
         "share": 1,
         "avgInteractions": 55.6,
-        "avgRate": 0.0217
+        "avgRate": 0.0168
       },
       {
         "type": "含連結",
@@ -596,17 +595,17 @@
     "correlations": [
       {
         "metric": "length",
-        "rho": -0.18,
+        "rho": -0.23,
         "n": 30
       },
       {
         "metric": "hour",
-        "rho": -0.19,
+        "rho": -0.28,
         "n": 30
       },
       {
         "metric": "hasQuestion",
-        "rho": -0.24,
+        "rho": -0.18,
         "n": 30
       },
       {
@@ -1284,19 +1283,19 @@
     ],
     "observations": [
       {
-        "title": "中篇（101–250 字）表現最好",
-        "detail": "字數和互動的 Spearman 相關為 0.16。中篇平均互動是長文的 29 倍，篇幅可以往這個區間靠攏。",
-        "evidence": "短文 7 篇平均 20.1；中篇 21 篇平均 72.5；長文 2 篇平均 2.5"
+        "title": "互動高度集中在少數爆文",
+        "detail": "平均值會被少數爆文拉高，判斷單篇表現時應同時看中位數。值得回頭拆解這幾篇爆文的主題與寫法，找出可以複製的部分。",
+        "evidence": "互動最高的 3 篇占全部 30 篇總互動的 85.7%（平均分配應約 10%）；中位數 4.5，平均 55.6"
       },
       {
         "title": "結尾提問的貼文互動較高",
         "detail": "以問句收尾等於給讀者一個回覆的理由。建議在故事型貼文最後加一句和讀者經驗相關的問題。",
-        "evidence": "結尾提問 3 篇平均互動 170.7；其餘 27 篇平均 42.9（4 倍）"
+        "evidence": "結尾提問 3 篇平均互動 170.7（中位數 17）；其餘 27 篇平均 42.9（中位數 4）；平均相差 4 倍"
       },
       {
-        "title": "個人故事明顯勝過名言摘錄",
-        "detail": "有時間線、有具體細節的個人經驗，比轉貼名言更能引起共鳴。名言可以保留作為過渡，但主力應放在故事。",
-        "evidence": "故事型 17 篇平均互動 88.9；引言型 6 篇平均 23.3（3.8 倍）"
+        "title": "中篇（101–250 字）表現最好",
+        "detail": "字數和互動的 Spearman 相關為 0.16。中篇平均互動是短文的 3.6 倍，篇幅可以往這個區間靠攏。",
+        "evidence": "短文 7 篇平均 20.1；中篇 21 篇平均 72.5；長文 2 篇平均 2.5（只比較 3 篇以上的篇幅）"
       }
     ]
   }

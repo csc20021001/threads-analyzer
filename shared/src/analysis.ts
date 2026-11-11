@@ -146,6 +146,12 @@ const STOP = new Set([
   '這樣', '那個', '這個', '一下', '一直', '不是', '知道', '真的', '其實', '還有', '如果', '時候', '現在', '一樣', '只是',
   '我把', '你的', '我的', '他的', '她的', '不要', '一次', '一點', '有人', '不會', '怎麼', '為什麼', '我們的', '就好', '一起', '最後', '說要',
   'the', 'a', 'to', 'and', 'of', 'is', 'in', 'i', 'you', 'it', 'on', 'for', 'with', 'that', 'this', 'my', 'we', 'be',
+  'at', 'our', 'ours', 'me', 'your', 'yours', 'us', 'he', 'she', 'they', 'them', 'his', 'her', 'their', 'its', 'it\'s',
+  'we\'re', 'i\'m', 'you\'re', 'they\'re', 'i\'ve', 'we\'ve', 'don\'t', 'can\'t', 'isn\'t', 'that\'s', 'there\'s', 'let\'s',
+  'are', 'was', 'were', 'been', 'am', 'do', 'does', 'did', 'have', 'has', 'had', 'will', 'would', 'can', 'could', 'should',
+  'get', 'got', 'go', 'going', 'just', 'so', 'but', 'or', 'not', 'no', 'all', 'some', 'more', 'most', 'very', 'really',
+  'about', 'from', 'by', 'as', 'an', 'up', 'out', 'into', 'over', 'than', 'then', 'there', 'here', 'what', 'when', 'how',
+  'who', 'which', 'why', 'if', 'also', 'one', 'like', 'now', 'new', 'today', 'time', 'these', 'those', 'too', 'much', 'many',
 ]);
 const segmenter = new Intl.Segmenter('zh-Hant', { granularity: 'word' });
 
@@ -153,7 +159,7 @@ export function tokenize(text: string): string[] {
   const out: string[] = [];
   const cleaned = text.replace(/https?:\/\/\S+/g, ' ').replace(/[#@][\p{L}\p{N}_.]+/gu, ' ');
   for (const s of segmenter.segment(cleaned)) {
-    const w = s.segment.toLowerCase();
+    const w = s.segment.toLowerCase().replace(/’/g, "'");
     if (s.isWordLike && [...w].length > 1 && !STOP.has(w) && !/^\d+$/.test(w)) out.push(w);
   }
   return out;

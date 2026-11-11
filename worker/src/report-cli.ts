@@ -24,7 +24,7 @@ if (!username) {
 }
 
 let raw: Post[];
-let meta: { username: string; fetchedAt: string; source: string; stoppedBy?: string; loggedIn?: boolean };
+let meta: { username: string; fetchedAt: string; source: string; stoppedBy?: string; loggedIn?: boolean; via?: string };
 let date: string;
 if (fromIdx >= 0) {
   const file = resolve(ROOT, args[fromIdx + 1]);
@@ -70,7 +70,9 @@ function toMarkdown(user: string, m: typeof meta, r: AnalysisResult, ps: CleanPo
   const td = r.timeDist;
   const L: string[] = [];
   L.push(`# @${user} Threads 貼文分析報告`, '');
-  L.push(`- 資料來源：${m.source}（${m.loggedIn ? '副帳號登入' : '未登入'}爬取，停止原因：${m.stoppedBy ?? '—'}）`);
+  L.push(m.via === 'scrape_cache'
+    ? `- 資料來源：${m.source}（網站 worker 爬取，從 Supabase scrape_cache 匯出）`
+    : `- 資料來源：${m.source}（${m.loggedIn ? '副帳號登入' : '未登入'}爬取，停止原因：${m.stoppedBy ?? '—'}）`);
   L.push(`- 抓取時間：${m.fetchedAt}`);
   L.push(`- 貼文期間：${ov.dateFrom} 至 ${ov.dateTo}（Asia/Taipei）`);
   L.push(`- 清理：原始 ${r.cleaning.inputCount} 筆，去重 ${r.cleaning.duplicatesRemoved} 筆；缺時間 ${r.cleaning.missing.postedAt}、缺曝光 ${r.cleaning.missing.views}、缺內文 ${r.cleaning.missing.text}`, '');
