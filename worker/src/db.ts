@@ -14,6 +14,12 @@ export interface Job {
   id: string;
   user_id: string;
   target_username: string;
+  force_refresh?: boolean; // 使用者按「重跑」建立的任務：略過快取
+}
+
+export interface LlmSuggestions {
+  model: string;
+  items: { title: string; detail: string; basis: string }[];
 }
 
 export async function claimNextJob(): Promise<Job | null> {
@@ -43,6 +49,7 @@ export async function writeCache(username: string, posts: Post[], source: DataSo
 
 export async function saveResults(
   job: Job, posts: CleanPost[], result: AnalysisResult, source: DataSource, workerInfo: string,
+  llm: LlmSuggestions | null,
 ) {
   const rows = posts.map((p) => ({
     job_id: job.id,
@@ -87,6 +94,8 @@ export async function saveResults(
     clusters: result.clusters,
     groups: result.groups,
     observations: result.observations,
+    llm_suggestions: llm?.items ?? null,
+    llm_model: llm?.model ?? null,
   });
   if (res.error) throw res.error;
 

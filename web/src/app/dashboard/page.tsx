@@ -13,9 +13,9 @@ const STATUS: Record<string, { label: string; tone: string }> = {
 export default async function Dashboard({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; notice?: string }>;
 }) {
-  const { error } = await searchParams;
+  const { error, notice } = await searchParams;
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   const { data: jobs } = await supabase
@@ -43,6 +43,7 @@ export default async function Dashboard({
         </form>
         <p className="muted small">會抓最近 30 篇主貼文，並逐篇打開貼文頁取得曝光數，一個帳號約需 3–4 分鐘。</p>
         {error && <p className="error">{error}</p>}
+        {notice && <p className="muted">{notice}</p>}
       </section>
 
       <section className="stack-sm">

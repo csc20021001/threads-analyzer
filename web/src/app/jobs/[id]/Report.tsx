@@ -1,4 +1,5 @@
 import type { AnalysisResult, CleanPost } from '@app/shared';
+import type { LlmView } from '@/lib/results';
 import { BarChart, ScatterChart } from './Charts';
 
 const pct = (x: number | null | undefined, d = 2) => (x == null ? '—' : `${(x * 100).toFixed(d)}%`);
@@ -14,8 +15,8 @@ const VERDICT: Record<string, { label: string; tone: string }> = {
 const METRIC: Record<string, string> = { length: '字數', hour: '發文時段', hasQuestion: '含問句', hasLink: '含連結' };
 
 export function Report({
-  jobId, result, posts, source,
-}: { jobId: string; result: AnalysisResult; posts: CleanPost[]; source: string | null }) {
+  jobId, result, posts, source, llm,
+}: { jobId: string; result: AnalysisResult; posts: CleanPost[]; source: string | null; llm: LlmView | null }) {
   const { overview: ov, cleaning, timeDist, lengthRel, postTypes, hashtags, keywords, groups, observations, top5, correlations } = result;
   const rankedByRate = result.summary.rankedBy === 'rate';
 
@@ -61,6 +62,26 @@ export function Report({
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="stack-sm">
+        <h2>LLM 內容策略建議</h2>
+        {llm ? (
+          <>
+            <p className="muted small">由 {llm.model} 依上方統計結果產生；只送彙總數字與代表貼文摘錄。樣本約 30 篇，建議仍需實際發文驗證。</p>
+            <ol className="obs">
+              {llm.items.map((s, i) => (
+                <li key={i}>
+                  <h3>{i + 1}. {s.title}</h3>
+                  <p>{s.detail}</p>
+                  <p className="muted small">依據：{s.basis}</p>
+                </li>
+              ))}
+            </ol>
+          </>
+        ) : (
+          <p className="muted small">這次分析沒有產生 LLM 建議（worker 未設定 ANTHROPIC_API_KEY，或呼叫失敗）。上方的內容策略觀察是規則式計算的結果，不受影響。</p>
+        )}
       </section>
 
       <section className="stack-sm">

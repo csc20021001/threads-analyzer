@@ -19,6 +19,17 @@ export function toResult(row: Record<string, any>): AnalysisResult {
   };
 }
 
+export interface LlmView {
+  model: string;
+  items: { title: string; detail: string; basis: string }[];
+}
+
+export function toLlm(row: Record<string, any>): LlmView | null {
+  return Array.isArray(row.llm_suggestions) && row.llm_suggestions.length
+    ? { model: row.llm_model ?? '', items: row.llm_suggestions }
+    : null;
+}
+
 export function toPost(r: Record<string, any>): CleanPost {
   return {
     postId: r.post_id,
