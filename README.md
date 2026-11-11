@@ -7,32 +7,39 @@
 - 資料：Supabase Postgres，所有表開 RLS，使用者只看得到自己的資料
 - 爬蟲：Playwright worker，獨立執行（本機或 Docker）
 - 命令列：不經網站也能直接出 Markdown 報告（`reports/`）
+- 任務管理：建立、查看、重跑（略過快取重新爬取）、刪除；同一帳號分析中不重複建立
+- LLM 建議：worker 設定 `ANTHROPIC_API_KEY` 時，用 Claude 依統計結果產生 3–5 條內容策略建議
+- 產品規格：[docs/PRD.md](docs/PRD.md)（功能、流程、資料權限、例外情境、Given／When／Then 驗收標準、任務拆解）
 
 ## 畫面截圖
 
-2026-11-11 實際操作截圖，資料都是用 Playwright 真實爬到的（非假資料）。登入 email 已遮蔽。
+2026-11-11 在線上版（Vercel）實際操作的截圖，資料都是用 Playwright 真實爬到的（非假資料）。登入 email 已遮蔽。
 
-**線上版（Vercel）**：在線上版送出 @emoless_com，由常駐的 worker 實際爬取後產出報告。
+**登入與任務管理**
 
-| 任務列表 | 報告：總覽與 3 點內容策略觀察 |
+| 登入頁（未登入一律導到這裡） | 任務列表：一筆爬取中、其餘完成 |
 |---|---|
-| ![線上版任務列表](docs/screenshots/18-live-dashboard.jpg) | ![線上版報告](docs/screenshots/19-live-report.jpg) |
+| ![登入頁](docs/screenshots/20-login.jpg) | ![任務列表](docs/screenshots/21-dashboard-running.jpg) |
+
+| 重跑：略過快取重新爬取 | 同一帳號分析中時不重複建立 | 刪除：任務、貼文、結果一併刪除 |
+|---|---|---|
+| ![重跑後的報告](docs/screenshots/23-rerun-report.jpg) | ![重複任務提示](docs/screenshots/22-duplicate-notice.jpg) | ![刪除後](docs/screenshots/28-delete-notice.jpg) |
 
 **報告各區（@emoless_com）**
 
-| Top 5（依互動率，曝光數 ≥ 第 25 百分位） | 發文時間分布、字數 × 互動、貼文類型 |
+| 內容策略觀察、LLM 建議區、Top 5 | 發文時間分布、字數 × 互動、貼文類型 |
 |---|---|
-| ![Top 5](docs/screenshots/12-top5.jpg) | ![圖表](docs/screenshots/13-charts.jpg) |
+| ![觀察與 Top 5](docs/screenshots/24-observations-llm-top5.jpg) | ![圖表](docs/screenshots/25-charts.jpg) |
 
-| 關鍵字、hashtag、特徵相關係數 | 分群與 NLP 成功／失敗原因 |
+| 關鍵字、hashtag、分群與 NLP 原因 | 全部貼文（清理後） |
 |---|---|
-| ![關鍵字](docs/screenshots/14-keywords.jpg) | ![分群](docs/screenshots/15-groups.jpg) |
+| ![關鍵字與分群](docs/screenshots/26-keywords-groups.jpg) | ![全部貼文](docs/screenshots/27-all-posts.jpg) |
 
-![全部貼文（清理後）：台灣時間、類型、字數、#／@／連結數、各項互動、曝光、互動率](docs/screenshots/16-posts.jpg)
+**多帳號比較**與第二個帳號（@zuck）
 
-**多帳號比較**（@zuck 與 @emoless_com）
-
-![多帳號比較](docs/screenshots/17-compare.jpg)
+| 多帳號比較 | @zuck 報告 |
+|---|---|
+| ![多帳號比較](docs/screenshots/29-compare.jpg) | ![zuck 報告](docs/screenshots/30-zuck-report.jpg) |
 
 **資料真實性比對**：打開 Threads 原頁，和爬蟲讀到的數字逐欄比對。
 
@@ -126,6 +133,7 @@ cp .env.example web/.env.local    # 網站用（只需要 NEXT_PUBLIC_ 開頭的
 | `FETCH_VIEWS` | worker | 是否逐篇補曝光數，預設 `true` |
 | `CACHE_MINUTES` | worker | 快取分鐘數，預設 30 |
 | `BROWSER_CHANNEL` | worker | 例如 `msedge`；Docker 留空 |
+| `ANTHROPIC_API_KEY` | worker | 選填。設定後以 Claude（claude-opus-5-5）產生內容策略建議；未設定時報告顯示說明，其他分析不受影響 |
 | `THREADS_STORAGE_STATE` | worker | 副帳號登入狀態檔路徑 |
 | `HEADLESS`、`POLL_MS` | worker | 除錯與輪詢間隔 |
 
@@ -173,7 +181,7 @@ cp .env.example web/.env.local    # 網站用（只需要 NEXT_PUBLIC_ 開頭的
 | 表 | 內容 | 權限 |
 |---|---|---|
 | `profiles` | 使用者資料（註冊時由 trigger 自動建立） | 只能讀自己的 |
-| `analysis_jobs` | 分析任務：帳號、狀態、資料來源、處理的 worker | 只能建立和讀自己的 |
+| `analysis_jobs` | 分析任務：帳號、狀態、資料來源、處理的 worker、是否為重跑 | 只能建立、讀取自己的；只能刪除自己已完成或失敗的 |
 | `posts` | 清理後的貼文，含原始互動數與衍生欄位 | 只能讀自己的 |
 | `analysis_results` | 彙總分析結果（總覽、時間分布、分群分析、觀察等，各一欄 JSON） | 只能讀自己的 |
 | `scrape_cache` | 爬取快取 | 只有 worker（service role）能存取 |
