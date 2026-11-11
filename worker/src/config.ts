@@ -15,6 +15,8 @@ export const config = {
   browserChannel: process.env.BROWSER_CHANNEL || undefined,
   /** 副帳號登入狀態檔；檔案存在就以登入身分爬，不存在就用未登入模式 */
   storageState: process.env.THREADS_STORAGE_STATE || undefined,
+  /** 逐篇打開貼文頁補曝光數（每帳號約多 2 分鐘）；設 FETCH_VIEWS=false 可關掉 */
+  fetchViews: process.env.FETCH_VIEWS !== 'false',
   /** 'playwright'（預設）或 'mock'：沒網路／被擋時用假資料跑通整條流程 */
   source: (process.env.DATA_SOURCE ?? 'playwright') as 'playwright' | 'mock',
 };

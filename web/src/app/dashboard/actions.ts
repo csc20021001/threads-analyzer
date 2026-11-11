@@ -1,11 +1,12 @@
 'use server';
 import { redirect } from 'next/navigation';
+import { parseThreadsInput } from '@app/shared';
 import { createClient } from '@/lib/supabase/server';
 
 export async function createJob(form: FormData) {
-  const username = String(form.get('username') ?? '').trim().replace(/^@/, '');
-  if (!/^[A-Za-z0-9._]{1,30}$/.test(username)) {
-    redirect(`/dashboard?error=${encodeURIComponent('帳號格式不正確')}`);
+  const username = parseThreadsInput(String(form.get('username') ?? ''));
+  if (!username) {
+    redirect(`/dashboard?error=${encodeURIComponent('請輸入 Threads 帳號（例如 emoless_com）或帳號網址（例如 https://www.threads.com/@emoless_com）')}`);
   }
 
   const supabase = await createClient();

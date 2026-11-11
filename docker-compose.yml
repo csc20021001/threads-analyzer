@@ -1,5 +1,5 @@
-# 本機跑 worker：docker compose up --build
-# 網頁部署在 Vercel（或本機 npm run dev:web），worker 只負責領任務、爬取、分析、寫回 Supabase。
+# 一鍵啟動 worker：docker compose up --build
+# 網頁部署在 Vercel（或本機 npm run dev:web）；worker 負責領任務、爬取、分析、寫回 Supabase。
 services:
   worker:
     build:
@@ -8,6 +8,11 @@ services:
     env_file: .env
     environment:
       HEADLESS: "true"
+      BROWSER_CHANNEL: ""                      # 用映像內建的 Chromium
+      THREADS_STORAGE_STATE: /app/worker/.auth/threads.json
+    volumes:
+      # 副帳號登入狀態不打包進映像，執行時唯讀掛進去（先在本機跑 npm run login -w worker）
+      - ./worker/.auth:/app/worker/.auth:ro
     restart: unless-stopped
     init: true
     ipc: host  # Chromium 在容器裡需要較大的共享記憶體

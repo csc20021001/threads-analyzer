@@ -21,3 +21,17 @@ export function parseCount(input: string | number | null | undefined): number | 
   };
   return Math.round(unit ? n * mult[unit] : n);
 }
+
+/**
+ * 接受帳號或網址，回傳小寫 username；格式不對回傳 null。
+ * "@emoless_com"、"emoless_com"、"https://www.threads.com/@emoless_com"、
+ * "threads.net/@emoless_com/post/Dd8EL_MGx4Z" 都會得到 "emoless_com"。
+ */
+export function parseThreadsInput(input: string): string | null {
+  let s = input.trim();
+  const m = s.match(/threads\.(?:net|com)\/@([A-Za-z0-9._]{1,30})/i);
+  if (m) s = m[1];
+  else if (/^https?:\/\//i.test(s) || /threads\.(?:net|com)/i.test(s)) return null;
+  s = s.replace(/^@/, '');
+  return /^[A-Za-z0-9._]{1,30}$/.test(s) ? s.toLowerCase() : null;
+}

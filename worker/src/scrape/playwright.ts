@@ -3,7 +3,7 @@ import { chromium, type Page, type Response } from 'playwright';
 import type { Post } from '@app/shared';
 import { config } from '../config.ts';
 import { FatalError, sleep } from '../retry.ts';
-import { extractPostsFromJson } from './extract.ts';
+import { extractPostsFromJson, findImpressionCount } from './extract.ts';
 
 export interface ScrapeResult {
   posts: Post[];
@@ -40,6 +40,7 @@ export async function scrapeProfile(username: string): Promise<ScrapeResult> {
       replies: Math.max(prev.replies, p.replies),
       reposts: Math.max(prev.reposts, p.reposts),
       quotes: Math.max(prev.quotes, p.quotes),
+      shares: Math.max(prev.shares, p.shares),
       views: prev.views ?? p.views,
     });
   };
@@ -68,7 +69,7 @@ export async function scrapeProfile(username: string): Promise<ScrapeResult> {
 
     let noNew = 0;
     while (byId.size < config.maxPosts) {
-      if (await isLoginWall(page)) return finish('login-wall');
+      if (await isLoginWall(page)) return await finish('login-wall');
       const before = byId.size;
       await page.mouse.move(640, 450);
       await page.mouse.wheel(0, 3000);
@@ -84,17 +85,48 @@ export async function scrapeProfile(username: string): Promise<ScrapeResult> {
     if (byId.size === 0) {
       for (const p of await domFallback(page, username)) add(p);
     }
-    return finish(byId.size >= config.maxPosts ? 'enough' : 'no-new');
+    return await finish(byId.size >= config.maxPosts ? 'enough' : 'no-new');
   } finally {
     page.off('response', onResponse);
     await browser.close();
   }
 
-  function finish(stoppedBy: ScrapeResult['stoppedBy']): ScrapeResult {
+  async function finish(stoppedBy: ScrapeResult['stoppedBy']): Promise<ScrapeResult> {
     const posts = [...byId.values()]
       .sort((a, b) => (b.postedAt ?? '').localeCompare(a.postedAt ?? ''))
       .slice(0, config.maxPosts);
+    page.off('response', onResponse);
+    if (config.fetchViews && stoppedBy !== 'login-wall') await fillViews(page, posts);
     return { posts, stoppedBy, loggedIn: !!storageState };
+  }
+}
+
+/** 逐篇打開貼文頁補上瀏覽數；每篇間隔 1.5–3 秒，單篇失敗就保留 null，不影響其他篇 */
+async function fillViews(page: Page, posts: Post[]) {
+  for (const post of posts) {
+    if (post.views != null || !post.url) continue;
+    let views: number | null = null;
+    const onRes = async (res: Response) => {
+      if (views != null || !/graphql/.test(res.url())) return;
+      try { views = findImpressionCount(await res.json()); } catch {}
+    };
+    page.on('response', onRes);
+    try {
+      await page.goto(post.url, { waitUntil: 'domcontentloaded', timeout: 20_000 });
+      await page.waitForTimeout(2500);
+      if (views == null) {
+        for (const json of await embeddedJson(page)) {
+          views = findImpressionCount(json);
+          if (views != null) break;
+        }
+      }
+    } catch {
+      // 這篇抓不到就算了
+    } finally {
+      page.off('response', onRes);
+    }
+    post.views = views;
+    await sleep(rand(1500, 3000));
   }
 }
 
@@ -129,7 +161,7 @@ async function domFallback(page: Page, username: string): Promise<Post[]> {
     seen.add(code);
     return [{
       postId: code, url: href, text, postedAt: null,
-      likes: 0, replies: 0, reposts: 0, quotes: 0, views: null,
+      likes: 0, replies: 0, reposts: 0, quotes: 0, shares: 0, views: null,
     }];
   });
 }

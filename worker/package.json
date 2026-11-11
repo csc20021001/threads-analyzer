@@ -9,7 +9,9 @@
     "probe": "tsx --env-file=../.env src/probe.ts",
     "login": "tsx --env-file=../.env src/login.ts",
     "check": "tsx --env-file=../.env src/check.ts",
-    "typecheck": "tsc --noEmit"
+    "report": "tsx --env-file=../.env src/report-cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/*.test.ts"
   },
   "dependencies": {
     "@app/shared": "*",

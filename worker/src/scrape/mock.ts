@@ -22,6 +22,7 @@ export function mockPosts(username: string, n = 30): Post[] {
       replies: Math.round(views * rnd() * 0.01),
       reposts: Math.round(views * rnd() * 0.005),
       quotes: Math.round(views * rnd() * 0.002),
+      shares: Math.round(views * rnd() * 0.003),
       views,
     };
   });
