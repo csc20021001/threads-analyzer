@@ -1,0 +1,22 @@
+{
+  "source": "題目附的試算表「數據分析題」工作表1（A1:O17），2026-11-12 讀取",
+  "note": "發布時間為試算表的序列值（1899-12-30 起算的天數）；引用欄對應 Threads 的分享（紙飛機）數",
+  "rows": [
+    { "code": "Dd8EL_MGx4Z", "serial": 46296.1919, "likes": 20, "replies": 1, "reposts": 0, "quotes": 0, "total": 21, "chars": 183 },
+    { "code": "Dd7mUdfmYqy", "serial": 46296.01067, "likes": 88, "replies": 6, "reposts": 0, "quotes": 2, "total": 96, "chars": 271 },
+    { "code": "Dd7JQFbj8lM", "serial": 46295.83426, "likes": 40, "replies": 3, "reposts": 0, "quotes": 0, "total": 43, "chars": 46 },
+    { "code": "Dd6u7gHmzYP", "serial": 46295.67454, "likes": 26, "replies": 7, "reposts": 0, "quotes": 3, "total": 36, "chars": 287 },
+    { "code": "Dd6U87bm8KW", "serial": 46295.51692, "likes": 58, "replies": 2, "reposts": 0, "quotes": 3, "total": 63, "chars": 292 },
+    { "code": "Dd54r3nm-bF", "serial": 46295.34537, "likes": 185, "replies": 47, "reposts": 1, "quotes": 10, "total": 243, "chars": 193 },
+    { "code": "Dd5bnaqG_Ij", "serial": 46295.16898, "likes": 18, "replies": 3, "reposts": 0, "quotes": 1, "total": 22, "chars": 376 },
+    { "code": "Dd5EnUvmT0N", "serial": 46295.0294, "likes": 13, "replies": 1, "reposts": 0, "quotes": 0, "total": 14, "chars": 197 },
+    { "code": "Dd4m-SxAdZV", "serial": 46294.84954, "likes": 504, "replies": 92, "reposts": 0, "quotes": 28, "total": 624, "chars": 292 },
+    { "code": "Dd4OJCXmmYN", "serial": 46294.69884, "likes": 2, "replies": 0, "reposts": 0, "quotes": 0, "total": 2, "chars": 195 },
+    { "code": "Dd3x3xym3sI", "serial": 46294.5273, "likes": 486, "replies": 53, "reposts": 4, "quotes": 17, "total": 560, "chars": 208 },
+    { "code": "Dd3SLGBGzPb", "serial": 46294.33495, "likes": 5, "replies": 0, "reposts": 0, "quotes": 0, "total": 5, "chars": 40 },
+    { "code": "Dd24_vCm3ko", "serial": 46294.18219, "likes": 6, "replies": 0, "reposts": 0, "quotes": 1, "total": 7, "chars": 185 },
+    { "code": "Dd2dpQHGXqN", "serial": 46294.01623, "likes": 107, "replies": 1, "reposts": 5, "quotes": 3, "total": 116, "chars": 53 },
+    { "code": "Dd2BfosAcIX", "serial": 46293.84553, "likes": 735, "replies": 9, "reposts": 4, "quotes": 98, "total": 846, "chars": 366 },
+    { "code": "Dd1noLLGq1g", "serial": 46293.68841, "likes": 1, "replies": 0, "reposts": 0, "quotes": 0, "total": 1, "chars": 200 }
+  ]
+}

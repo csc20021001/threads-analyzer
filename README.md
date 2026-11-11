@@ -54,6 +54,27 @@
 |---|---|
 | ![原頁 1](docs/screenshots/08-threads-post.png) | ![原頁 2](docs/screenshots/09-threads-sheet-post.png) |
 
+## 數據分析題（題目附的試算表）
+
+用題目附的試算表（@emoless_com 16 篇）依按讚與回覆分三群，補上空白的「主題」「文型」欄，並對每群 3–5 篇代表貼文套用同一套 NLP 規則說明成功與失敗原因。
+
+- 作答試算表（知道連結者可檢視）：https://docs.google.com/spreadsheets/d/17J74L7B65HSmK7fpEDJXhx9ZqoI4IlhfK4Zr6F-FsfU
+- 完整報告：[reports/sheet_emoless_com_groups.md](reports/sheet_emoless_com_groups.md)（另有 .csv、.json）
+- 數字以試算表為準；試算表的「貼文摘要」有截斷，內文改用貼文頁全文（`data/sheet_emoless_com_fulltext.json`）；試算表的發布時間是 UTC，報告換成台灣時間。
+- 分群與 NLP 用的是網站報告同一套程式（`clusterPosts`、`analyzeGroups`）。
+
+![數據分析題作答試算表](docs/screenshots/31-sheet-groups.jpg)
+
+結論摘要：高互動群 6 篇中 5 篇是故事敘事，具體數字與故事時間線明顯較多；名言引言帶讚但幾乎沒有回覆；低互動群 4 篇中 3 篇是「經驗＋反駁觀點」（「我不同意／我不建議…」）。樣本只有 16 篇且沒有曝光數，結論是相關、不是因果。
+
+重跑：
+
+```bash
+cd worker
+npx tsx --env-file=../.env src/sheet-fetch.ts   # 逐篇取全文（需要網路）
+npx tsx src/sheet-analysis.ts                     # 分群、NLP，輸出 reports/sheet_emoless_com_groups.*
+```
+
 ## 目錄
 
 ```
@@ -65,6 +86,8 @@
 │       ├── scrape/           爬取（playwright.ts）、JSON 解析（extract.ts）、假資料（mock.ts）
 │       ├── index.ts          輪詢任務 → 快取 → 爬取 → 清理分析 → 寫回
 │       ├── report-cli.ts     命令列產生 data/ 與 reports/
+│       ├── sheet-fetch.ts    數據分析題：取試算表 16 篇的全文
+│       ├── sheet-analysis.ts 數據分析題：分三群、主題／文型、NLP 原因
 │       ├── login.ts          副帳號登入，存登入狀態
 │       └── probe.ts          爬取可行性實測（存下所有回應）
 ├── shared/src/               兩邊共用：清理（clean.ts）、分析（analysis.ts）、NLP（nlp.ts）、型別
