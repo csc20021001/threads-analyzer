@@ -1,0 +1,10 @@
+:root { --fg: #1a1a1a; --muted: #6b6b6b; --bg: #fafafa; --line: #e3e3e3; --accent: #2b59c3; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, "Noto Sans TC", sans-serif; color: var(--fg); background: var(--bg); }
+main { max-width: 880px; margin: 0 auto; padding: 32px 16px; }
+input, button { font: inherit; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; }
+button { background: var(--accent); color: #fff; border: none; cursor: pointer; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.muted { color: var(--muted); }
+.error { color: #b3261e; }

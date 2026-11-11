@@ -1,0 +1,11 @@
+{
+  "name": "threads-analyzer",
+  "private": true,
+  "workspaces": ["shared", "web", "worker"],
+  "scripts": {
+    "dev:web": "npm run dev -w web",
+    "dev:worker": "npm run dev -w worker",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w web && npm run typecheck -w worker",
+    "test": "npm run test -w shared"
+  }
+}

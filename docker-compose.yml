@@ -1,0 +1,13 @@
+# 本機跑 worker：docker compose up --build
+# 網頁部署在 Vercel（或本機 npm run dev:web），worker 只負責領任務、爬取、分析、寫回 Supabase。
+services:
+  worker:
+    build:
+      context: .
+      dockerfile: worker/Dockerfile
+    env_file: .env
+    environment:
+      HEADLESS: "true"
+    restart: unless-stopped
+    init: true
+    ipc: host  # Chromium 在容器裡需要較大的共享記憶體

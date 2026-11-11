@@ -1,0 +1,24 @@
+{
+  "name": "worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=../.env src/index.ts",
+    "start": "tsx src/index.ts",
+    "probe": "tsx --env-file=../.env src/probe.ts",
+    "login": "tsx --env-file=../.env src/login.ts",
+    "check": "tsx --env-file=../.env src/check.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@app/shared": "*",
+    "@supabase/supabase-js": "^2.49.4",
+    "playwright": "1.52.0",
+    "tsx": "^4.19.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
