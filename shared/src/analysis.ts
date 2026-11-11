@@ -17,16 +17,23 @@ const median = (xs: number[]) => {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 };
 
-/** 一半以上有曝光數就用互動率排；否則退回互動量，報告上要標示 */
-export function rank(posts: CleanPost[]): { ranked: CleanPost[]; rankedBy: 'rate' | 'interactions' } {
-  const withViews = posts.filter((p) => p.rate != null).length;
-  const rankedBy = withViews > 0 && withViews * 2 >= posts.length ? 'rate' : 'interactions';
+/**
+ * 一半以上有曝光數就用互動率排；否則退回互動量，報告上要標示。
+ * 互動率只排曝光數達全體第 25 百分位以上的貼文：剛發幾小時、曝光很少的貼文分母小，互動率會被放大。
+ */
+export function rank(posts: CleanPost[]): { ranked: CleanPost[]; rankedBy: 'rate' | 'interactions'; rateMinViews: number | null } {
+  const viewed = posts.filter((p) => p.rate != null);
+  const rankedBy = viewed.length > 0 && viewed.length * 2 >= posts.length ? 'rate' : 'interactions';
+  if (rankedBy === 'interactions') {
+    return { ranked: [...posts].sort((a, b) => b.interactions - a.interactions), rankedBy, rateMinViews: null };
+  }
+  const vs = viewed.map((p) => p.views!).sort((a, b) => a - b);
+  const rateMinViews = vs[Math.floor((vs.length - 1) * 0.25)];
+  const eligible = (p: CleanPost) => p.rate != null && p.views! >= rateMinViews;
   const ranked = [...posts].sort((a, b) =>
-    rankedBy === 'rate'
-      ? (b.rate ?? -1) - (a.rate ?? -1) || b.interactions - a.interactions
-      : b.interactions - a.interactions,
+    Number(eligible(b)) - Number(eligible(a)) || (b.rate ?? -1) - (a.rate ?? -1) || b.interactions - a.interactions,
   );
-  return { ranked, rankedBy };
+  return { ranked, rankedBy, rateMinViews };
 }
 
 export { spearman } from './stats.ts';
@@ -224,7 +231,7 @@ export function clusterPosts(posts: Post[], samplesPerCluster = 4): Cluster[] {
 /** 完整流程：清理 → 指標 → 分群 → 分群 NLP 分析 → 內容策略觀察 */
 export function analyze(raw: Post[]): AnalysisResult {
   const { posts, report } = cleanPosts(raw);
-  const { ranked, rankedBy } = rank(posts);
+  const { ranked, rankedBy, rateMinViews } = rank(posts);
   const clusters = clusterPosts(posts);
   const ov = overview(posts);
   const td = timeDistribution(posts);
@@ -232,7 +239,7 @@ export function analyze(raw: Post[]): AnalysisResult {
   const types = postTypeStats(posts);
   const groups = analyzeGroups(posts, clusters);
   return {
-    summary: { postCount: posts.length, viewsCoverage: ov.viewsCoverage, rankedBy },
+    summary: { postCount: posts.length, viewsCoverage: ov.viewsCoverage, rankedBy, rateMinViews },
     cleaning: report,
     overview: ov,
     top5: ranked.slice(0, 5),

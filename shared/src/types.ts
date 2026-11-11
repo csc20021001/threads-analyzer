@@ -168,6 +168,7 @@ export interface AnalysisResult {
     postCount: number;
     viewsCoverage: number; // 有曝光數的比例 0–1
     rankedBy: 'rate' | 'interactions';
+    rateMinViews: number | null; // 互動率排名只計曝光數 ≥ 這個值的貼文（全體第 25 百分位）
   };
   cleaning: CleanReport;
   overview: Overview;

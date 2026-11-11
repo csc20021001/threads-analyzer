@@ -63,7 +63,9 @@ export function Report({
 
       <section className="stack-sm">
         <h2>Top 5 貼文（依{rankedByRate ? '互動率' : '總互動'}排序）</h2>
-        {!rankedByRate && <p className="muted small">曝光數不足一半，改用總互動排序。</p>}
+        {rankedByRate
+          ? <p className="muted small">只排曝光數 ≥ {num(result.summary.rateMinViews)} 的貼文（全體第 25 百分位），避免剛發、曝光很少的貼文因分母小而排在前面。</p>
+          : <p className="muted small">曝光數不足一半，改用總互動排序。</p>}
         <div className="tablewrap">
           <table>
             <thead><tr><th>#</th><th>內容</th><th>發文時間</th><th className="n">讚</th><th className="n">回覆</th><th className="n">總互動</th><th className="n">曝光</th><th className="n">互動率</th></tr></thead>

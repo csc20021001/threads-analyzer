@@ -58,20 +58,21 @@ const sd = (xs: number[]) => {
 };
 const r1 = (x: number) => Number(x.toFixed(1));
 
-function describe(key: FeatureKey, v: number, m: number, good: boolean): string {
-  const avg = `全體平均 ${r1(m)}`;
+/** 只描述事實與和全體平均的差距；好壞由前面的「加分／扣分」決定，避免字面評價和方向互相矛盾 */
+function describe(key: FeatureKey, v: number, m: number): string {
+  const vs = `全體平均 ${r1(m)}`;
+  const more = v > m;
   switch (key) {
-    case 'charCount': return v > m ? `篇幅較長（${v} 字，${avg}）` : `篇幅較短（${v} 字，${avg}）`;
-    case 'sentences': return v > m ? `段落與句子多，節奏慢（${v} 句）` : `句子少，資訊量有限（${v} 句）`;
-    case 'firstPerson': return v > m ? `第一人稱敘事濃（每百字 ${v} 個「我」）` : `第一人稱少，較像旁觀評論（每百字 ${v} 個「我」）`;
-    case 'endsWithQuestion': return v ? '結尾提問，直接邀請讀者回覆' : '結尾沒有提問，缺少回覆的入口';
-    case 'numbers': return v > m ? `具體數字細節多（${v} 處），畫面感強` : `缺少具體數字細節（${v} 處）`;
-    case 'dialogue': return v > m ? `有對話場景（${v} 處），讀起來像現場` : '沒有對話，以敘述為主';
-    case 'narrative': return v > m ? `有清楚的時間線（${v} 個時間標記），是完整故事` : `缺少時間線，比較像片段感想（${v} 個時間標記）`;
+    case 'charCount': return `篇幅${more ? '較長' : '較短'}（${v} 字，${vs}）`;
+    case 'sentences': return `句子${more ? '較多' : '較少'}（${v} 句，${vs}）`;
+    case 'firstPerson': return `第一人稱${more ? '較多' : '較少'}（每百字 ${v} 個「我」，${vs}）`;
+    case 'endsWithQuestion': return v ? '以問句結尾，邀請讀者回覆' : '沒有以問句結尾';
+    case 'numbers': return `具體數字${more ? '較多' : '較少'}（${v} 處，${vs}）`;
+    case 'dialogue': return v > 0 ? `有對話或引述（${v} 處，${vs}）` : '沒有對話或引述';
+    case 'narrative': return `敘事時間標記${more ? '較多，有故事時間線' : '較少，較像片段感想'}（${v} 個，${vs}）`;
     case 'quoteStyle': return v ? '名言／引言型短句' : '個人經驗敘述，不是名言型短句';
-    case 'emotion': return v > m ? `情緒詞多（${v} 個），情感張力強` : `情緒詞少（${v} 個），語氣平淡`;
+    case 'emotion': return `情緒詞${more ? '較多' : '較少'}（${v} 個，${vs}）`;
   }
-  return good ? '' : '';
 }
 
 interface Direction { key: FeatureKey; rho: number | null; mean: number; sd: number }
@@ -96,7 +97,7 @@ function analyzeSample(
   const pos = contrib.filter((x) => x.c > 0).sort((a, b) => b.c - a.c);
   const neg = contrib.filter((x) => x.c < 0).sort((a, b) => a.c - b.c);
   const fmt = (x: (typeof contrib)[number], good: boolean) =>
-    `${good ? '加分' : '扣分'}：${describe(x.d.key, f[x.d.key], x.d.mean, good)}（此特徵與互動 ρ=${x.d.rho!.toFixed(2)}）`;
+    `${good ? '加分' : '扣分'}：${describe(x.d.key, f[x.d.key], x.d.mean)}（此特徵與互動 ρ=${x.d.rho!.toFixed(2)}）`;
 
   let reasons: string[];
   let verdict: SampleAnalysis['verdict'];

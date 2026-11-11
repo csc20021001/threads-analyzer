@@ -84,6 +84,7 @@ function toMarkdown(user: string, m: typeof meta, r: AnalysisResult, ps: CleanPo
   L.push('## 內容策略觀察', '');
   r.observations.forEach((o, i) => L.push(`${i + 1}. **${o.title}**：${o.detail}`, `   - 依據：${o.evidence}`));
   L.push('', `## Top 5 貼文（依${r.summary.rankedBy === 'rate' ? '互動率' : '總互動'}）`, '');
+  if (r.summary.rateMinViews != null) L.push(`> 只排曝光數 ≥ ${r.summary.rateMinViews} 的貼文（全體第 25 百分位），避免剛發、曝光很少的貼文因分母小而排在前面。`, '');
   L.push('| # | 內容 | 發文時間 | 讚 | 回覆 | 總互動 | 曝光 | 互動率 |', '|---|---|---|---:|---:|---:|---:|---:|');
   r.top5.forEach((p, i) => L.push(`| ${i + 1} | [${cut(p.text, 40)}](${p.url}) | ${p.postedAtLocal} | ${p.likes} | ${p.replies} | ${p.interactions} | ${p.views ?? '—'} | ${pct(p.rate)} |`));
   L.push('', '## 發文時間分布', '');

@@ -1,0 +1,1303 @@
+{
+  "meta": {
+    "username": "emoless_com",
+    "fetchedAt": "2026-11-11T10:31:23.378Z",
+    "source": "playwright",
+    "stoppedBy": "enough",
+    "loggedIn": true
+  },
+  "result": {
+    "summary": {
+      "postCount": 30,
+      "viewsCoverage": 1,
+      "rankedBy": "rate",
+      "rateMinViews": 207
+    },
+    "cleaning": {
+      "inputCount": 30,
+      "duplicatesRemoved": 0,
+      "missing": {
+        "postedAt": 0,
+        "views": 0,
+        "text": 0,
+        "url": 0
+      }
+    },
+    "overview": {
+      "postCount": 30,
+      "dateFrom": "2026-11-06 20:07",
+      "dateTo": "2026-11-11 16:01",
+      "avgLikes": 40.6,
+      "avgReplies": 11.6,
+      "avgReposts": 0.2,
+      "avgQuotes": 0.1,
+      "avgShares": 3.1,
+      "avgViews": 13650,
+      "avgInteractions": 55.6,
+      "medianInteractions": 4.5,
+      "overallRate": 0.0041,
+      "viewsCoverage": 1
+    },
+    "top5": [
+      {
+        "links": [],
+        "mentions": [],
+        "postId": "4026223883019978910",
+        "url": "https://www.threads.com/@emoless_com/post/DfgBUotmYie",
+        "text": "「妳幫我穿一下。」\n阿嬤把針遞過來，我坐到她旁邊。\n以前都是我拿衣服給她。\n褲腳往上改兩公分，裙子的勾子鬆了，她瞇一下眼睛就穿好了。\n今天她試了六次。\n線頭都起毛了。\n她說這支針不好。\n換一支。\n還是一樣。\n桌上有塊喜餅盒上的磁鐵，她拿來吸掉到桌邊的針，吸了兩次。\n我把線穿過去。\n她問用什麼顏色。\n我說咖啡色。\n她說妳這件是黑的。\n我說算了，裡面看不到。\n她把褲子翻過來，摸著接縫，問我要改多少。",
+        "postedAt": "2026-11-09T00:15:20.000Z",
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "views": 207,
+        "postedAtLocal": "2026-11-09 08:15",
+        "weekday": 1,
+        "hour": 8,
+        "charCount": 184,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 4,
+        "rate": 0.01932367149758454
+      },
+      {
+        "links": [],
+        "mentions": [],
+        "postId": "4024888574667396568",
+        "url": "https://www.threads.com/@emoless_com/post/DfbRtV5lBXY",
+        "text": "「你要做一個不動聲色的大人了。不准情緒化，不准偷偷想念，不准回頭看。去過自己另外的生活。」\n\n—— 村上春樹《舞·舞·舞》",
+        "postedAt": "2026-11-07T04:02:18.000Z",
+        "likes": 60,
+        "replies": 0,
+        "reposts": 1,
+        "quotes": 1,
+        "shares": 1,
+        "views": 4367,
+        "postedAtLocal": "2026-11-07 12:02",
+        "weekday": 6,
+        "hour": 12,
+        "charCount": 58,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 63,
+        "rate": 0.014426379665674376
+      },
+      {
+        "links": [],
+        "mentions": [],
+        "postId": "4027428311437850493",
+        "url": "https://www.threads.com/@emoless_com/post/DfkTLYFmrd9",
+        "text": "「生活不需要比別人好，但一定要比以前好；步履不停，便自會有屬於你的花期。」",
+        "postedAt": "2026-11-10T16:08:19.000Z",
+        "likes": 8,
+        "replies": 0,
+        "reposts": 1,
+        "quotes": 0,
+        "shares": 0,
+        "views": 635,
+        "postedAtLocal": "2026-11-11 00:08",
+        "weekday": 3,
+        "hour": 0,
+        "charCount": 37,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 9,
+        "rate": 0.014173228346456693
+      },
+      {
+        "links": [],
+        "mentions": [],
+        "postId": "4027317077002678111",
+        "url": "https://www.threads.com/@emoless_com/post/Dfj54s8m-9f",
+        "text": "我四年級那張聯絡資料，記得幾件事。\n第一，媽媽再婚，我還是寫原本的姓。\n第二，緊急聯絡人有兩格電話號碼。\n她先生問我要不要填他，我說不要，我會打給外婆。\n他說好。\n第三，白板筆忘了蓋，那天我被老師念了。\n這個沒關係。\n真正有關係的是，運動會下雨，我們在走廊等家長。\n他來了。\n手上兩件雨衣。\n他沒有走進班上，只站在鞋櫃旁邊問，妳要跟我回去，還是等外婆？\n我說外婆膝蓋會痛。\n他點頭，把其中一件雨衣抖開，讓我自己伸手。",
+        "postedAt": "2026-11-10T12:27:19.000Z",
+        "likes": 1,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "views": 552,
+        "postedAtLocal": "2026-11-10 20:27",
+        "weekday": 2,
+        "hour": 20,
+        "charCount": 196,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 5,
+        "rate": 0.009057971014492754
+      },
+      {
+        "links": [],
+        "mentions": [],
+        "postId": "4027078007596546928",
+        "url": "https://www.threads.com/@emoless_com/post/DfjDhyNlHtw",
+        "text": "四點五十分，我在幼兒園門口滑到婆婆的貼文。\n她說阿嬤只是高興，朋友一直問孫子，照片放上去方便看，也沒有拿去賣。\n我知道她的意思。\n我媽也很想給人看。\n但我往下滑，三十七張裡面有孩子洗澡的照片。\n蓮蓬頭還入鏡。\n澡盆下面那張小鴨貼紙翹起來了，我昨天才想撕。\n我停在那裡。\n她設公開。\n我問能不能撤掉。\n她說小孩子哪有人在看這個，妳想太多。\n我打開留言，有一個我沒見過的人，問她孫女讀哪一間。",
+        "postedAt": "2026-11-10T04:32:20.000Z",
+        "likes": 0,
+        "replies": 4,
+        "reposts": 0,
+        "quotes": 0,
+        "shares": 0,
+        "views": 473,
+        "postedAtLocal": "2026-11-10 12:32",
+        "weekday": 2,
+        "hour": 12,
+        "charCount": 183,
+        "hashtags": [],
+        "mentionList": [],
+        "urlCount": 0,
+        "postType": "純文字",
+        "interactions": 4,
+        "rate": 0.008456659619450317
+      }
+    ],
+    "timeDist": {
+      "byWeekday": [
+        {
+          "key": 1,
+          "label": "週一",
+          "count": 6,
+          "avgInteractions": 4.7
+        },
+        {
+          "key": 2,
+          "label": "週二",
+          "count": 6,
+          "avgInteractions": 4.2
+        },
+        {
+          "key": 3,
+          "label": "週三",
+          "count": 5,
+          "avgInteractions": 5
+        },
+        {
+          "key": 4,
+          "label": "週四",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 5,
+          "label": "週五",
+          "count": 1,
+          "avgInteractions": 0
+        },
+        {
+          "key": 6,
+          "label": "週六",
+          "count": 6,
+          "avgInteractions": 100.3
+        },
+        {
+          "key": 0,
+          "label": "週日",
+          "count": 6,
+          "avgInteractions": 164.8
+        }
+      ],
+      "byHour": [
+        {
+          "key": 0,
+          "label": "0 點",
+          "count": 5,
+          "avgInteractions": 178
+        },
+        {
+          "key": 1,
+          "label": "1 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 2,
+          "label": "2 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 3,
+          "label": "3 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 4,
+          "label": "4 點",
+          "count": 5,
+          "avgInteractions": 9.8
+        },
+        {
+          "key": 5,
+          "label": "5 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 6,
+          "label": "6 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 7,
+          "label": "7 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 8,
+          "label": "8 點",
+          "count": 5,
+          "avgInteractions": 10.8
+        },
+        {
+          "key": 9,
+          "label": "9 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 10,
+          "label": "10 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 11,
+          "label": "11 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 12,
+          "label": "12 點",
+          "count": 5,
+          "avgInteractions": 15.2
+        },
+        {
+          "key": 13,
+          "label": "13 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 14,
+          "label": "14 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 15,
+          "label": "15 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 16,
+          "label": "16 點",
+          "count": 5,
+          "avgInteractions": 7.6
+        },
+        {
+          "key": 17,
+          "label": "17 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 18,
+          "label": "18 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 19,
+          "label": "19 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 20,
+          "label": "20 點",
+          "count": 5,
+          "avgInteractions": 112.4
+        },
+        {
+          "key": 21,
+          "label": "21 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 22,
+          "label": "22 點",
+          "count": 0,
+          "avgInteractions": 0
+        },
+        {
+          "key": 23,
+          "label": "23 點",
+          "count": 0,
+          "avgInteractions": 0
+        }
+      ],
+      "busiestWeekday": {
+        "key": 1,
+        "label": "週一",
+        "count": 6,
+        "avgInteractions": 4.7
+      },
+      "busiestHour": {
+        "key": 0,
+        "label": "0 點",
+        "count": 5,
+        "avgInteractions": 178
+      },
+      "bestWeekday": {
+        "key": 0,
+        "label": "週日",
+        "count": 6,
+        "avgInteractions": 164.8
+      },
+      "bestHour": {
+        "key": 0,
+        "label": "0 點",
+        "count": 5,
+        "avgInteractions": 178
+      }
+    },
+    "lengthRel": {
+      "rhoInteractions": 0.16,
+      "rhoRate": -0.18,
+      "buckets": [
+        {
+          "label": "短文",
+          "range": "100 字以下",
+          "count": 7,
+          "avgInteractions": 20.1,
+          "avgRate": 0.0233
+        },
+        {
+          "label": "中篇",
+          "range": "101–250 字",
+          "count": 21,
+          "avgInteractions": 72.5,
+          "avgRate": 0.0228
+        },
+        {
+          "label": "長文",
+          "range": "250 字以上",
+          "count": 2,
+          "avgInteractions": 2.5,
+          "avgRate": 0.0049
+        }
+      ],
+      "points": [
+        {
+          "postId": "4027907973914003611",
+          "charCount": 188,
+          "interactions": 7
+        },
+        {
+          "postId": "4027808315212058347",
+          "charCount": 34,
+          "interactions": 4
+        },
+        {
+          "postId": "4027672428075266980",
+          "charCount": 184,
+          "interactions": 1
+        },
+        {
+          "postId": "4027549108733581103",
+          "charCount": 179,
+          "interactions": 4
+        },
+        {
+          "postId": "4027428311437850493",
+          "charCount": 37,
+          "interactions": 9
+        },
+        {
+          "postId": "4027317077002678111",
+          "charCount": 196,
+          "interactions": 5
+        },
+        {
+          "postId": "4027194774637992096",
+          "charCount": 35,
+          "interactions": 1
+        },
+        {
+          "postId": "4027078007596546928",
+          "charCount": 183,
+          "interactions": 4
+        },
+        {
+          "postId": "4026964758075336726",
+          "charCount": 158,
+          "interactions": 3
+        },
+        {
+          "postId": "4026840439399087160",
+          "charCount": 172,
+          "interactions": 8
+        },
+        {
+          "postId": "4026704037966180146",
+          "charCount": 203,
+          "interactions": 4
+        },
+        {
+          "postId": "4026584246068672099",
+          "charCount": 49,
+          "interactions": 0
+        },
+        {
+          "postId": "4026474524242030205",
+          "charCount": 151,
+          "interactions": 0
+        },
+        {
+          "postId": "4026350214625687061",
+          "charCount": 360,
+          "interactions": 3
+        },
+        {
+          "postId": "4026223883019978910",
+          "charCount": 184,
+          "interactions": 4
+        },
+        {
+          "postId": "4026106097407444744",
+          "charCount": 242,
+          "interactions": 17
+        },
+        {
+          "postId": "4025980768829041269",
+          "charCount": 184,
+          "interactions": 4
+        },
+        {
+          "postId": "4025856953100739949",
+          "charCount": 44,
+          "interactions": 64
+        },
+        {
+          "postId": "4025757803495520936",
+          "charCount": 200,
+          "interactions": 5
+        },
+        {
+          "postId": "4025629593436885679",
+          "charCount": 251,
+          "interactions": 2
+        },
+        {
+          "postId": "4025497088687681081",
+          "charCount": 197,
+          "interactions": 36
+        },
+        {
+          "postId": "4025371765299469978",
+          "charCount": 158,
+          "interactions": 9
+        },
+        {
+          "postId": "4025253983724189339",
+          "charCount": 179,
+          "interactions": 873
+        },
+        {
+          "postId": "4025136205319109226",
+          "charCount": 226,
+          "interactions": 493
+        },
+        {
+          "postId": "4025011382018344069",
+          "charCount": 173,
+          "interactions": 25
+        },
+        {
+          "postId": "4024888574667396568",
+          "charCount": 58,
+          "interactions": 63
+        },
+        {
+          "postId": "4024767276201358498",
+          "charCount": 205,
+          "interactions": 10
+        },
+        {
+          "postId": "4024662086445398458",
+          "charCount": 190,
+          "interactions": 11
+        },
+        {
+          "postId": "4024548341510273815",
+          "charCount": 184,
+          "interactions": 0
+        },
+        {
+          "postId": "4024407910407453324",
+          "charCount": 46,
+          "interactions": 0
+        }
+      ]
+    },
+    "postTypes": [
+      {
+        "type": "純文字",
+        "count": 30,
+        "share": 1,
+        "avgInteractions": 55.6,
+        "avgRate": 0.0217
+      },
+      {
+        "type": "含連結",
+        "count": 0,
+        "share": 0,
+        "avgInteractions": 0,
+        "avgRate": null
+      },
+      {
+        "type": "含 hashtag",
+        "count": 0,
+        "share": 0,
+        "avgInteractions": 0,
+        "avgRate": null
+      },
+      {
+        "type": "含 mention",
+        "count": 0,
+        "share": 0,
+        "avgInteractions": 0,
+        "avgRate": null
+      },
+      {
+        "type": "混合",
+        "count": 0,
+        "share": 0,
+        "avgInteractions": 0,
+        "avgRate": null
+      }
+    ],
+    "hashtags": [],
+    "correlations": [
+      {
+        "metric": "length",
+        "rho": -0.18,
+        "n": 30
+      },
+      {
+        "metric": "hour",
+        "rho": -0.19,
+        "n": 30
+      },
+      {
+        "metric": "hasQuestion",
+        "rho": -0.24,
+        "n": 30
+      },
+      {
+        "metric": "hasLink",
+        "rho": null,
+        "n": 30
+      }
+    ],
+    "keywords": [
+      {
+        "term": "回去",
+        "score": 0.801
+      },
+      {
+        "term": "地方",
+        "score": 0.7362
+      },
+      {
+        "term": "有些",
+        "score": 0.6272
+      },
+      {
+        "term": "回頭",
+        "score": 0.6088
+      },
+      {
+        "term": "以前",
+        "score": 0.5894
+      },
+      {
+        "term": "生活",
+        "score": 0.5718
+      },
+      {
+        "term": "那天",
+        "score": 0.5573
+      },
+      {
+        "term": "後來",
+        "score": 0.4874
+      },
+      {
+        "term": "看看",
+        "score": 0.4833
+      },
+      {
+        "term": "今天",
+        "score": 0.4676
+      },
+      {
+        "term": "過去",
+        "score": 0.4607
+      },
+      {
+        "term": "很久",
+        "score": 0.4519
+      },
+      {
+        "term": "坐在",
+        "score": 0.4513
+      },
+      {
+        "term": "走了",
+        "score": 0.4444
+      },
+      {
+        "term": "小時候",
+        "score": 0.4431
+      },
+      {
+        "term": "時間",
+        "score": 0.4335
+      },
+      {
+        "term": "阿嬤",
+        "score": 0.4321
+      },
+      {
+        "term": "東西",
+        "score": 0.4187
+      },
+      {
+        "term": "別人",
+        "score": 0.3989
+      },
+      {
+        "term": "一會兒",
+        "score": 0.3773
+      }
+    ],
+    "clusters": [
+      {
+        "name": "high",
+        "label": "一半・每次・開始",
+        "keywords": [
+          "一半",
+          "每次",
+          "開始"
+        ],
+        "postIds": [
+          "4025253983724189339",
+          "4025136205319109226",
+          "4025497088687681081",
+          "4025856953100739949",
+          "4024662086445398458",
+          "4027907973914003611",
+          "4025011382018344069",
+          "4024767276201358498",
+          "4026840439399087160",
+          "4026106097407444744"
+        ],
+        "samples": [
+          "4025253983724189339",
+          "4025497088687681081",
+          "4027907973914003611",
+          "4024767276201358498"
+        ]
+      },
+      {
+        "name": "mid",
+        "label": "我知道・都沒・東西",
+        "keywords": [
+          "我知道",
+          "都沒",
+          "東西"
+        ],
+        "postIds": [
+          "4027317077002678111",
+          "4025757803495520936",
+          "4024888574667396568",
+          "4027808315212058347",
+          "4025371765299469978",
+          "4027549108733581103",
+          "4027078007596546928",
+          "4026964758075336726",
+          "4026704037966180146",
+          "4026350214625687061"
+        ],
+        "samples": [
+          "4027317077002678111",
+          "4024888574667396568",
+          "4027549108733581103",
+          "4026964758075336726"
+        ]
+      },
+      {
+        "name": "low",
+        "label": "桌上・先把・地方",
+        "keywords": [
+          "桌上",
+          "先把",
+          "地方"
+        ],
+        "postIds": [
+          "4026223883019978910",
+          "4025980768829041269",
+          "4027428311437850493",
+          "4025629593436885679",
+          "4027672428075266980",
+          "4027194774637992096",
+          "4026584246068672099",
+          "4026474524242030205",
+          "4024548341510273815",
+          "4024407910407453324"
+        ],
+        "samples": [
+          "4026223883019978910",
+          "4027428311437850493",
+          "4027194774637992096",
+          "4026474524242030205"
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "high",
+        "label": "一半・每次・開始",
+        "count": 10,
+        "avgLikes": 112.9,
+        "avgReplies": 31.7,
+        "profile": [
+          {
+            "key": "charCount",
+            "label": "字數",
+            "value": 181.6,
+            "overall": 161.7
+          },
+          {
+            "key": "sentences",
+            "label": "句數",
+            "value": 11.1,
+            "overall": 10.1
+          },
+          {
+            "key": "firstPerson",
+            "label": "第一人稱密度（每百字「我」）",
+            "value": 3,
+            "overall": 2.9
+          },
+          {
+            "key": "endsWithQuestion",
+            "label": "結尾提問",
+            "value": 0.2,
+            "overall": 0.1
+          },
+          {
+            "key": "numbers",
+            "label": "具體數字",
+            "value": 3,
+            "overall": 2.1
+          },
+          {
+            "key": "dialogue",
+            "label": "對話",
+            "value": 0.3,
+            "overall": 0.6
+          },
+          {
+            "key": "narrative",
+            "label": "敘事時間標記",
+            "value": 2.7,
+            "overall": 2
+          },
+          {
+            "key": "quoteStyle",
+            "label": "引言型",
+            "value": 0.1,
+            "overall": 0.2
+          },
+          {
+            "key": "emotion",
+            "label": "情緒詞",
+            "value": 0.9,
+            "overall": 0.6
+          }
+        ],
+        "summary": "高互動群與全體差最多的是：具體數字 3（全體 2.1）；敘事時間標記 2.7（全體 2）；對話 0.3（全體 0.6）。群內區辨詞：一半、每次、開始。",
+        "samples": [
+          {
+            "postId": "4025253983724189339",
+            "url": "https://www.threads.com/@emoless_com/post/Dfckyvmmzab",
+            "excerpt": "晚上十點零七分，先生傳本月家用給我。\n一萬六，叫我出八千。\n房租、水電、尿布，一人一半。\n十一點，我在客廳餵奶，孩子還差…",
+            "likes": 557,
+            "replies": 231,
+            "interactions": 873,
+            "features": {
+              "charCount": 179,
+              "sentences": 12,
+              "firstPerson": 5,
+              "endsWithQuestion": 0,
+              "numbers": 4,
+              "dialogue": 0,
+              "narrative": 2,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：具體數字較多（4 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "加分：沒有對話或引述（此特徵與互動 ρ=-0.13）",
+              "加分：句子較多（12 句，全體平均 10.1）（此特徵與互動 ρ=0.15）"
+            ]
+          },
+          {
+            "postId": "4025497088687681081",
+            "url": "https://www.threads.com/@emoless_com/post/DfdcEYvmS45",
+            "excerpt": "「家屬往這邊，朋友往後面。」\n禮儀人員拿著簽到簿，等我回答。\n八點二十，我站在前婆婆的告別式門口。\n六年。離婚是六年前。…",
+            "likes": 29,
+            "replies": 7,
+            "interactions": 36,
+            "features": {
+              "charCount": 197,
+              "sentences": 17,
+              "firstPerson": 5.6,
+              "endsWithQuestion": 0,
+              "numbers": 3,
+              "dialogue": 1,
+              "narrative": 4,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：敘事時間標記較多，有故事時間線（4 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "加分：句子較多（17 句，全體平均 10.1）（此特徵與互動 ρ=0.15）",
+              "加分：具體數字較多（3 處，全體平均 2.1）（此特徵與互動 ρ=0.25）"
+            ]
+          },
+          {
+            "postId": "4027907973914003611",
+            "url": "https://www.threads.com/@emoless_com/post/DfmAPYlG4ib",
+            "excerpt": "我坐在沙發旁邊，把延長線一孔一孔拔掉。\n用不到這麼多了。\n以前週五有人帶筆電來，有人要充行動電源，還有人每次都問有沒有另…",
+            "likes": 3,
+            "replies": 4,
+            "interactions": 7,
+            "features": {
+              "charCount": 188,
+              "sentences": 12,
+              "firstPerson": 3.7,
+              "endsWithQuestion": 0,
+              "numbers": 3,
+              "dialogue": 0,
+              "narrative": 2,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：具體數字較多（3 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "加分：沒有對話或引述（此特徵與互動 ρ=-0.13）",
+              "加分：句子較多（12 句，全體平均 10.1）（此特徵與互動 ρ=0.15）"
+            ]
+          },
+          {
+            "postId": "4024767276201358498",
+            "url": "https://www.threads.com/@emoless_com/post/Dfa2IN5mTSi",
+            "excerpt": "女兒搬出去那天，嫌我塞太多東西。\n\n水果、衛生紙、冷凍水餃，後車廂差點關不起來。她說附近都有超市，真的不用每次都拿。\n\n…",
+            "likes": 8,
+            "replies": 2,
+            "interactions": 10,
+            "features": {
+              "charCount": 205,
+              "sentences": 12,
+              "firstPerson": 2.4,
+              "endsWithQuestion": 0,
+              "numbers": 3,
+              "dialogue": 0,
+              "narrative": 4,
+              "quoteStyle": 0,
+              "emotion": 1
+            },
+            "verdict": "success",
+            "reasons": [
+              "加分：敘事時間標記較多，有故事時間線（4 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "加分：具體數字較多（3 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "加分：沒有對話或引述（此特徵與互動 ρ=-0.13）"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "mid",
+        "label": "我知道・都沒・東西",
+        "count": 10,
+        "avgLikes": 7.7,
+        "avgReplies": 2.4,
+        "profile": [
+          {
+            "key": "charCount",
+            "label": "字數",
+            "value": 172.9,
+            "overall": 161.7
+          },
+          {
+            "key": "sentences",
+            "label": "句數",
+            "value": 11,
+            "overall": 10.1
+          },
+          {
+            "key": "firstPerson",
+            "label": "第一人稱密度（每百字「我」）",
+            "value": 3.3,
+            "overall": 2.9
+          },
+          {
+            "key": "endsWithQuestion",
+            "label": "結尾提問",
+            "value": 0,
+            "overall": 0.1
+          },
+          {
+            "key": "numbers",
+            "label": "具體數字",
+            "value": 2.1,
+            "overall": 2.1
+          },
+          {
+            "key": "dialogue",
+            "label": "對話",
+            "value": 0.6,
+            "overall": 0.6
+          },
+          {
+            "key": "narrative",
+            "label": "敘事時間標記",
+            "value": 2.4,
+            "overall": 2
+          },
+          {
+            "key": "quoteStyle",
+            "label": "引言型",
+            "value": 0.2,
+            "overall": 0.2
+          },
+          {
+            "key": "emotion",
+            "label": "情緒詞",
+            "value": 0.8,
+            "overall": 0.6
+          }
+        ],
+        "summary": "中互動群與全體差最多的是：結尾提問 0（全體 0.1）；第一人稱密度（每百字「我」） 3.3（全體 2.9）。群內區辨詞：我知道、都沒、東西。",
+        "samples": [
+          {
+            "postId": "4027317077002678111",
+            "url": "https://www.threads.com/@emoless_com/post/Dfj54s8m-9f",
+            "excerpt": "我四年級那張聯絡資料，記得幾件事。\n第一，媽媽再婚，我還是寫原本的姓。\n第二，緊急聯絡人有兩格電話號碼。\n她先生問我要不…",
+            "likes": 1,
+            "replies": 4,
+            "interactions": 5,
+            "features": {
+              "charCount": 196,
+              "sentences": 13,
+              "firstPerson": 5.1,
+              "endsWithQuestion": 0,
+              "numbers": 1,
+              "dialogue": 0,
+              "narrative": 2,
+              "quoteStyle": 0,
+              "emotion": 1
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "加分：沒有對話或引述（此特徵與互動 ρ=-0.13）",
+              "加分：句子較多（13 句，全體平均 10.1）（此特徵與互動 ρ=0.15）",
+              "扣分：具體數字較少（1 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "扣分：沒有以問句結尾（此特徵與互動 ρ=0.17）"
+            ]
+          },
+          {
+            "postId": "4024888574667396568",
+            "url": "https://www.threads.com/@emoless_com/post/DfbRtV5lBXY",
+            "excerpt": "「你要做一個不動聲色的大人了。不准情緒化，不准偷偷想念，不准回頭看。去過自己另外的生活。」\n\n—— 村上春樹《舞·舞·舞…",
+            "likes": 60,
+            "replies": 0,
+            "interactions": 63,
+            "features": {
+              "charCount": 58,
+              "sentences": 5,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 1,
+              "dialogue": 1,
+              "narrative": 0,
+              "quoteStyle": 1,
+              "emotion": 0
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "扣分：敘事時間標記較少，較像片段感想（0 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "扣分：篇幅較短（58 字，全體平均 161.7）（此特徵與互動 ρ=0.16）"
+            ]
+          },
+          {
+            "postId": "4027549108733581103",
+            "url": "https://www.threads.com/@emoless_com/post/DfkupNVgZcv",
+            "excerpt": "六頁。我坐在影印店，算自己這次面試做了多少東西。\n一份新品活動提案，六頁。\n對方說只是看看程度。\n我做了兩晚。\n星期四凌…",
+            "likes": 0,
+            "replies": 4,
+            "interactions": 4,
+            "features": {
+              "charCount": 179,
+              "sentences": 15,
+              "firstPerson": 2.8,
+              "endsWithQuestion": 0,
+              "numbers": 1,
+              "dialogue": 0,
+              "narrative": 1,
+              "quoteStyle": 0,
+              "emotion": 1
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "加分：句子較多（15 句，全體平均 10.1）（此特徵與互動 ρ=0.15）",
+              "加分：沒有對話或引述（此特徵與互動 ρ=-0.13）",
+              "扣分：敘事時間標記較少，較像片段感想（1 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "扣分：具體數字較少（1 處，全體平均 2.1）（此特徵與互動 ρ=0.25）"
+            ]
+          },
+          {
+            "postId": "4026964758075336726",
+            "url": "https://www.threads.com/@emoless_com/post/DfipxyYGOgW",
+            "excerpt": "離職那天，同事說改天約吃飯，我說好，群組先不要踢我，還有幾個檔案要傳。後來檔案傳完了，我也沒退，偶爾看他們聊午餐、抱怨客…",
+            "likes": 2,
+            "replies": 1,
+            "interactions": 3,
+            "features": {
+              "charCount": 158,
+              "sentences": 6,
+              "firstPerson": 5.1,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 5,
+              "quoteStyle": 0,
+              "emotion": 1
+            },
+            "verdict": "mixed",
+            "reasons": [
+              "加分：敘事時間標記較多，有故事時間線（5 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "加分：沒有對話或引述（此特徵與互動 ρ=-0.13）",
+              "扣分：具體數字較少（0 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "扣分：句子較少（6 句，全體平均 10.1）（此特徵與互動 ρ=0.15）"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "low",
+        "label": "桌上・先把・地方",
+        "count": 10,
+        "avgLikes": 1.2,
+        "avgReplies": 0.8,
+        "profile": [
+          {
+            "key": "charCount",
+            "label": "字數",
+            "value": 130.5,
+            "overall": 161.7
+          },
+          {
+            "key": "sentences",
+            "label": "句數",
+            "value": 8.2,
+            "overall": 10.1
+          },
+          {
+            "key": "firstPerson",
+            "label": "第一人稱密度（每百字「我」）",
+            "value": 2.2,
+            "overall": 2.9
+          },
+          {
+            "key": "endsWithQuestion",
+            "label": "結尾提問",
+            "value": 0.1,
+            "overall": 0.1
+          },
+          {
+            "key": "numbers",
+            "label": "具體數字",
+            "value": 1.3,
+            "overall": 2.1
+          },
+          {
+            "key": "dialogue",
+            "label": "對話",
+            "value": 0.8,
+            "overall": 0.6
+          },
+          {
+            "key": "narrative",
+            "label": "敘事時間標記",
+            "value": 1,
+            "overall": 2
+          },
+          {
+            "key": "quoteStyle",
+            "label": "引言型",
+            "value": 0.3,
+            "overall": 0.2
+          },
+          {
+            "key": "emotion",
+            "label": "情緒詞",
+            "value": 0.2,
+            "overall": 0.6
+          }
+        ],
+        "summary": "低互動群與全體差最多的是：敘事時間標記 1（全體 2）；情緒詞 0.2（全體 0.6）；具體數字 1.3（全體 2.1）。群內區辨詞：桌上、先把、地方。",
+        "samples": [
+          {
+            "postId": "4026223883019978910",
+            "url": "https://www.threads.com/@emoless_com/post/DfgBUotmYie",
+            "excerpt": "「妳幫我穿一下。」\n阿嬤把針遞過來，我坐到她旁邊。\n以前都是我拿衣服給她。\n褲腳往上改兩公分，裙子的勾子鬆了，她瞇一下眼…",
+            "likes": 0,
+            "replies": 4,
+            "interactions": 4,
+            "features": {
+              "charCount": 184,
+              "sentences": 17,
+              "firstPerson": 3.8,
+              "endsWithQuestion": 0,
+              "numbers": 2,
+              "dialogue": 1,
+              "narrative": 1,
+              "quoteStyle": 0,
+              "emotion": 0
+            },
+            "verdict": "failure",
+            "reasons": [
+              "扣分：敘事時間標記較少，較像片段感想（1 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "扣分：情緒詞較少（0 個，全體平均 0.6）（此特徵與互動 ρ=0.13）",
+              "扣分：有對話或引述（1 處，全體平均 0.6）（此特徵與互動 ρ=-0.13）"
+            ]
+          },
+          {
+            "postId": "4027428311437850493",
+            "url": "https://www.threads.com/@emoless_com/post/DfkTLYFmrd9",
+            "excerpt": "「生活不需要比別人好，但一定要比以前好；步履不停，便自會有屬於你的花期。」",
+            "likes": 8,
+            "replies": 0,
+            "interactions": 9,
+            "features": {
+              "charCount": 37,
+              "sentences": 2,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 1,
+              "narrative": 0,
+              "quoteStyle": 1,
+              "emotion": 0
+            },
+            "verdict": "failure",
+            "reasons": [
+              "扣分：敘事時間標記較少，較像片段感想（0 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "扣分：具體數字較少（0 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "扣分：篇幅較短（37 字，全體平均 161.7）（此特徵與互動 ρ=0.16）"
+            ]
+          },
+          {
+            "postId": "4027194774637992096",
+            "url": "https://www.threads.com/@emoless_com/post/DfjeE9_m1ig",
+            "excerpt": "小時候怕天黑，總盼著有人來接。長大後走了很久的夜路，才慢慢不再回頭看。",
+            "likes": 1,
+            "replies": 0,
+            "interactions": 1,
+            "features": {
+              "charCount": 35,
+              "sentences": 2,
+              "firstPerson": 0,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 0,
+              "quoteStyle": 0,
+              "emotion": 1
+            },
+            "verdict": "failure",
+            "reasons": [
+              "扣分：敘事時間標記較少，較像片段感想（0 個，全體平均 2）（此特徵與互動 ρ=0.24）",
+              "扣分：具體數字較少（0 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "扣分：篇幅較短（35 字，全體平均 161.7）（此特徵與互動 ρ=0.16）"
+            ]
+          },
+          {
+            "postId": "4026474524242030205",
+            "url": "https://www.threads.com/@emoless_com/post/Dfg6T8imy59",
+            "excerpt": "今天去拿修改好的西裝，老闆說腰放了兩吋，穿起來應該比較舒服。\n\n這套原本是買來結婚穿的。\n\n婚沒結成，西裝一直掛在衣櫃最…",
+            "likes": 0,
+            "replies": 0,
+            "interactions": 0,
+            "features": {
+              "charCount": 151,
+              "sentences": 8,
+              "firstPerson": 2,
+              "endsWithQuestion": 0,
+              "numbers": 0,
+              "dialogue": 0,
+              "narrative": 2,
+              "quoteStyle": 0,
+              "emotion": 1
+            },
+            "verdict": "failure",
+            "reasons": [
+              "扣分：具體數字較少（0 處，全體平均 2.1）（此特徵與互動 ρ=0.25）",
+              "扣分：句子較少（8 句，全體平均 10.1）（此特徵與互動 ρ=0.15）",
+              "扣分：沒有以問句結尾（此特徵與互動 ρ=0.17）"
+            ]
+          }
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "title": "中篇（101–250 字）表現最好",
+        "detail": "字數和互動的 Spearman 相關為 0.16。中篇平均互動是長文的 29 倍，篇幅可以往這個區間靠攏。",
+        "evidence": "短文 7 篇平均 20.1；中篇 21 篇平均 72.5；長文 2 篇平均 2.5"
+      },
+      {
+        "title": "結尾提問的貼文互動較高",
+        "detail": "以問句收尾等於給讀者一個回覆的理由。建議在故事型貼文最後加一句和讀者經驗相關的問題。",
+        "evidence": "結尾提問 3 篇平均互動 170.7；其餘 27 篇平均 42.9（4 倍）"
+      },
+      {
+        "title": "個人故事明顯勝過名言摘錄",
+        "detail": "有時間線、有具體細節的個人經驗，比轉貼名言更能引起共鳴。名言可以保留作為過渡，但主力應放在故事。",
+        "evidence": "故事型 17 篇平均互動 88.9；引言型 6 篇平均 23.3（3.8 倍）"
+      }
+    ]
+  }
+}
