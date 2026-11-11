@@ -8,6 +8,45 @@
 - 爬蟲：Playwright worker，獨立執行（本機或 Docker）
 - 命令列：不經網站也能直接出 Markdown 報告（`reports/`）
 
+## 畫面截圖
+
+2026-11-11 實際操作截圖，資料都是用 Playwright 真實爬到的（非假資料）。登入 email 已遮蔽。
+
+**線上版（Vercel）**：在線上版送出 @emoless_com，由常駐的 worker 實際爬取後產出報告。
+
+| 任務列表 | 報告：總覽與 3 點內容策略觀察 |
+|---|---|
+| ![線上版任務列表](docs/screenshots/18-live-dashboard.jpg) | ![線上版報告](docs/screenshots/19-live-report.jpg) |
+
+**報告各區（@emoless_com）**
+
+| Top 5（依互動率，曝光數 ≥ 第 25 百分位） | 發文時間分布、字數 × 互動、貼文類型 |
+|---|---|
+| ![Top 5](docs/screenshots/12-top5.jpg) | ![圖表](docs/screenshots/13-charts.jpg) |
+
+| 關鍵字、hashtag、特徵相關係數 | 分群與 NLP 成功／失敗原因 |
+|---|---|
+| ![關鍵字](docs/screenshots/14-keywords.jpg) | ![分群](docs/screenshots/15-groups.jpg) |
+
+![全部貼文（清理後）：台灣時間、類型、字數、#／@／連結數、各項互動、曝光、互動率](docs/screenshots/16-posts.jpg)
+
+**多帳號比較**（@zuck 與 @emoless_com）
+
+![多帳號比較](docs/screenshots/17-compare.jpg)
+
+**資料真實性比對**：打開 Threads 原頁，和爬蟲讀到的數字逐欄比對。
+
+| 貼文 | 來源 | 讚 | 回覆 | 轉發 | 分享 | 瀏覽 |
+|---|---|---:|---:|---:|---:|---:|
+| DfmAPYlG4ib | Threads 原頁 | 3 | 4 | — | — | 44 |
+| | 爬蟲讀到 | 3 | 4 | 0 | 0 | 44 |
+| Dd2BfosAcIX | Threads 原頁 | 736 | 9 | 4 | 98 | 11 萬 |
+| | 爬蟲讀到 | 736 | 9 | 4 | 98 | 110,638 |
+
+| Threads 原頁：DfmAPYlG4ib | Threads 原頁：Dd2BfosAcIX |
+|---|---|
+| ![原頁 1](docs/screenshots/08-threads-post.png) | ![原頁 2](docs/screenshots/09-threads-sheet-post.png) |
+
 ## 目錄
 
 ```
@@ -25,6 +64,7 @@
 ├── supabase/migrations/      資料表、RLS、函式
 ├── data/                     實際爬到的原始資料（JSON）
 ├── reports/                  命令列產出的分析報告（Markdown＋JSON）
+├── docs/screenshots/         實際操作截圖
 ├── AI_LOG.md                 AI 協作紀錄
 ├── docker-compose.yml        一鍵啟動 worker
 └── .env.example              所有環境變數
