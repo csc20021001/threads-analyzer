@@ -2,6 +2,7 @@
 
 輸入一個 Threads 帳號名稱或帳號網址，用 Playwright 抓最近 30 篇主貼文（含曝光數），清理後產出互動表現分析報告：總覽指標、互動率 Top 5、發文時間分布、文字長度與互動、貼文類型、關鍵字與 hashtag、三群分群的 NLP 成功／失敗分析，以及 3 點內容策略觀察。
 
+- 線上版：https://threads-analyzer-flax.vercel.app （需註冊登入；爬取由另外常駐的 worker 處理，見「部署到 Vercel」）
 - 網頁：Next.js（App Router）＋ Supabase Auth（Email／Password），部署在 Vercel
 - 資料：Supabase Postgres，所有表開 RLS，使用者只看得到自己的資料
 - 爬蟲：Playwright worker，獨立執行（本機或 Docker）
