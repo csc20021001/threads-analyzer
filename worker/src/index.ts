@@ -5,7 +5,7 @@ import { claimNextJob, finishJob, readCache, saveResults, writeCache, type Job }
 import { withRetry, sleep } from './retry.ts';
 import { scrapeProfile } from './scrape/playwright.ts';
 import { mockPosts } from './scrape/mock.ts';
-import { llmEnabled, suggest } from './llm.ts';
+import { llmLabel, suggest } from './llm.ts';
 
 // 寫進每筆任務，事後查得到是哪台機器、哪個模式處理的（之前曾有殘留的舊 worker 用 mock 搶走任務）
 const WORKER_INFO = `${hostname()}・${config.source}・pid ${process.pid}・啟動於 ${new Date().toISOString()}`;
@@ -52,7 +52,7 @@ process.on('SIGINT', () => { stopping = true; });
 
 console.log(`[worker] 啟動：${WORKER_INFO}，每 ${config.pollMs / 1000}s 輪詢`);
 if (config.source === 'mock') console.warn('[worker] ⚠ 目前是 mock 模式，產生的報告都是假資料');
-console.log(`[worker] LLM 建議：${llmEnabled() ? '開啟' : '關閉（未設定 ANTHROPIC_API_KEY，改顯示規則式觀察）'}`);
+console.log(`[worker] LLM 建議：${llmLabel()}`);
 while (!stopping) {
   const job = await claimNextJob().catch((e) => {
     console.error('[worker] 領任務失敗', e);

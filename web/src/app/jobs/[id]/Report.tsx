@@ -80,7 +80,7 @@ export function Report({
             </ol>
           </>
         ) : (
-          <p className="muted small">這次分析沒有產生 LLM 建議（worker 未設定 ANTHROPIC_API_KEY，或呼叫失敗）。上方的內容策略觀察是規則式計算的結果，不受影響。</p>
+          <p className="muted small">這次分析沒有產生 LLM 建議（worker 未設定 ANTHROPIC_API_KEY 或 LOCAL_LLM_URL，或呼叫失敗）。上方的內容策略觀察是規則式計算的結果，不受影響。</p>
         )}
       </section>
 

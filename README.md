@@ -8,7 +8,7 @@
 - 爬蟲：Playwright worker，獨立執行（本機或 Docker）
 - 命令列：不經網站也能直接出 Markdown 報告（`reports/`）
 - 任務管理：建立、查看、重跑（略過快取重新爬取）、刪除；同一帳號分析中不重複建立
-- LLM 建議：worker 設定 `ANTHROPIC_API_KEY` 時，用 Claude 依統計結果產生 3–5 條內容策略建議
+- LLM 建議：依統計結果產生 3–5 條內容策略建議。預設用本機 LM Studio 的開源模型（Google Gemma 4 E4B，`LOCAL_LLM_URL`）；設定 `ANTHROPIC_API_KEY` 時改用 Claude
 - 產品規格：[docs/PRD.md](docs/PRD.md)（功能、流程、資料權限、例外情境、Given／When／Then 驗收標準、任務拆解）
 
 ## 畫面截圖
@@ -27,9 +27,9 @@
 
 **報告各區（@emoless_com）**
 
-| 內容策略觀察、LLM 建議區、Top 5 | 發文時間分布、字數 × 互動、貼文類型 |
-|---|---|
-| ![觀察與 Top 5](docs/screenshots/24-observations-llm-top5.jpg) | ![圖表](docs/screenshots/25-charts.jpg) |
+| LLM 內容策略建議（本地模型 Gemma 4 E4B，2026-11-12） | 互動率 Top 5 | 發文時間分布、字數 × 互動、貼文類型 |
+|---|---|---|
+| ![LLM 建議](docs/screenshots/32-llm-local.jpg) | ![Top 5](docs/screenshots/33-top5.jpg) | ![圖表](docs/screenshots/25-charts.jpg) |
 
 | 關鍵字、hashtag、分群與 NLP 原因 | 全部貼文（清理後） |
 |---|---|
@@ -156,7 +156,9 @@ cp .env.example web/.env.local    # 網站用（只需要 NEXT_PUBLIC_ 開頭的
 | `FETCH_VIEWS` | worker | 是否逐篇補曝光數，預設 `true` |
 | `CACHE_MINUTES` | worker | 快取分鐘數，預設 30 |
 | `BROWSER_CHANNEL` | worker | 例如 `msedge`；Docker 留空 |
-| `ANTHROPIC_API_KEY` | worker | 選填。設定後以 Claude（claude-opus-5-5）產生內容策略建議；未設定時報告顯示說明，其他分析不受影響 |
+| `LOCAL_LLM_URL` | worker | 選填。本機 OpenAI 相容伺服器（LM Studio：`http://localhost:1234/v1`），用來產生內容策略建議 |
+| `LOCAL_LLM_MODEL` | worker | 選填，預設 `google/gemma-4-e4b` |
+| `ANTHROPIC_API_KEY` | worker | 選填。設定後改用 Claude（claude-opus-5-5）產生建議，優先於本地模型；兩者都未設定時報告顯示說明，其他分析不受影響 |
 | `THREADS_STORAGE_STATE` | worker | 副帳號登入狀態檔路徑 |
 | `HEADLESS`、`POLL_MS` | worker | 除錯與輪詢間隔 |
 
